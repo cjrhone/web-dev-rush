@@ -2,7 +2,7 @@
 
 #### _Web Dev Rush, 4/3/18_
 
-#### By _**CJ, Alex, Rio and Azamat**_
+#### By _**CJ, Alex, Rio, Jim, and Azamat**_
 
 ## Description
 
