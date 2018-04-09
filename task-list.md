@@ -7,7 +7,9 @@
 _Choose a task from the list and write your name in parenthesis next to the
 task if you're currently working on it. ( EXAMPLE: *Create a README.md (CJ) )
 Once completed -- cut the task from the "Task" header and move it into the
-"Completed" header._
+"Completed" header.
+
+NOTE: Make sure to remove console logs and/or alerts before merging your branch_
 
 ## Tasks
 
@@ -49,6 +51,7 @@ Once completed -- cut the task from the "Task" header and move it into the
 * _Receive string value from input div_
 * _Create an ordered array of HTML prompts_
 * _Create loop that progresses through each HTML prompt after user input_
+* _Create a function that appends correct strings to display box_
 * _Create an ordered array of prompt instructions_
 * _Create loop that progresses through each prompt instruction after user input_
 * _Create function that compares HTML prompts <--> User input_
