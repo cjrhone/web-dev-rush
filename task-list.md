@@ -22,14 +22,16 @@ Once completed -- cut the task from the "Task" header and move it into the
 
 ### HTML
 
+* _Confirm link between bootstrap, CSS, Javascript, jQuery, animate.css, and howler_
 * _Create Main Menu screen div that contains a start button_
 * _Create a Play Mode div that contains divs:
     1) "Display box" div
-    2) "Prompt box" div
-    3) Input div
+    2) "HTML Prompts" div
+    3) "Input" div
     4) "Time limit" div
     5) "Score" div
-    6) "Bug Counter" div_
+    6) "Bug Counter" div
+    7) "Instructions box" div_
 * _Create a Victory div that contains:
     1) Victory Text
     2) Results div
@@ -42,17 +44,26 @@ Once completed -- cut the task from the "Task" header and move it into the
 ### Javascript/jQuery
 
 * _Responsiveness main menu start button --> play mode_
-* _Receive string value from user input div_
+* _Responsiveness retry button --> play mode_
+* _Responsiveness about us button --> aboutus.html_
+* _Receive string value from input div_
 * _Create an ordered array of HTML prompts_
+* _Create loop that progresses through each HTML prompt after user input_
 * _Create an ordered array of prompt instructions_
+* _Create loop that progresses through each prompt instruction after user input_
 * _Create function that compares HTML prompts <--> User input_
+* _Create function that indicates when user input does not match HTML prompt, creating a bug_
+* _Create loop or if statement that indicates when there are three bugs, resulting in a Game Over_
 * _Create function that increments score with every correct input_
-* _Create function that_
+* _Create function that decreases time limit per second_
+* _Create loop or if statement that checks if time limit is 0, resulting in a Game Over_
+* _Create loop or if statement that checks if HTML prompts have looped through, resulting in Victory_
+
 
 
 ### CSS Styling
 
-* _Style paragraph fonts (<p>)_
+* _Style paragraph fonts (p)_
 * _Style header fonts (h1, h2, etc.)_
 * _Style main menu background_
 * _Style play mode background_

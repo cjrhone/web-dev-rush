@@ -19,9 +19,9 @@ _A typing game/ educational tool that challenges players to code a website as qu
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
 | **Player starts game** | Player clicks "Start" button | The game starts|
-| **Player follows typing prompts** | The game prompts "Type <html>" Player types "<html>", then presses enter key | Player receives points and moves on to next prompt |
-| **Player misspells typing prompts**| The player misspells "<html>" to "<Httml>", then presses enter key | Player gets a bug notification, receives no points, and moves on to next prompt |
-| **Player wins or loses game**| Player views his/her results and presses "Retry" | The game starts again |
+| **Player follows typing prompts** | The game prompts "Type 'html'" Player types 'html', then presses enter key | Player receives points and moves on to next prompt |
+| **Player misspells typing prompts**| The player misspells 'html' to 'Httml', then presses enter key | Player gets a bug notification, receives no points, and moves on to next prompt |
+| **Player wins or loses game**| Player views results and presses "Retry" | The game replays |
 | **Player wants to learn more about creators** | Player clicks "About Us" section of page | Redirects to "About Us" page with more info |
 
 
