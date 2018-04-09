@@ -24,7 +24,11 @@ li a:hover {
 
 body{
     text-align: center;
-    background-color: lightblue;
+    background-image: url(https://i.imgur.com/QTCRd0S.jpg);
+    background-size:     cover;                      /* <------ */
+      background-repeat:   no-repeat;
+      background-position: center center;
+      
 }
 
 .container{
