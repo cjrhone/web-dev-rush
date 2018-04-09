@@ -22,14 +22,16 @@ Once completed -- cut the task from the "Task" header and move it into the
 
 ### HTML
 
-* _Create Main Menu screen div that contains: 1) a start button_
+* _Create Main Menu screen div that contains a start button_
 * _Create a Play Mode div that contains divs:
     1) "Display box" div
     2) "Prompt box" div
     3) Input div
-    4) Time limit div_
-* _Create a Game Over div that contains:
-    1) Game Over Text
+    4) "Time limit" div
+    5) "Score" div
+    6) "Bug Counter" div_
+* _Create a Victory div that contains:
+    1) Victory Text
     2) Results div
     3) Retry Button_
 * _Create a Game Over div that contains:
@@ -39,8 +41,13 @@ Once completed -- cut the task from the "Task" header and move it into the
 
 ### Javascript/jQuery
 
-* _Responsiveness from main menu start --> play mode_
-* _Receive string value from user input box_
+* _Responsiveness main menu start button --> play mode_
+* _Receive string value from user input div_
+* _Create an ordered array of HTML prompts_
+* _Create an ordered array of prompt instructions_
+* _Create function that compares HTML prompts <--> User input_
+* _Create function that increments score with every correct input_
+* _Create function that_
 
 
 ### CSS Styling
@@ -55,6 +62,7 @@ Once completed -- cut the task from the "Task" header and move it into the
 ### CSS Graphics/Animation
 
 * _Add and animate glyph for "correct" input_
+* _Add and animate glyph for "incorrect" input_
 
 
 

@@ -6,7 +6,7 @@
 
 ## Description
 
-_A game that challenges players to code a website as quickly and as accurately as possible. This game was created at Epicodus coding bootcamp as a week 5 team project_
+_A typing game/ educational tool that challenges players to code a website as quickly and as accurately as possible. 3 bugs ( mistypes ) and its Game Over! This game was created at Epicodus coding bootcamp as a week 5 team project_
 
 ## Setup/Installation Requirements
 
@@ -15,9 +15,14 @@ _A game that challenges players to code a website as quickly and as accurately a
 * _Right-click on the HTML file "index.html", then open it using a web browser._
 * _Use Firefox or Chrome for best results, though IE shouldn't have any problems._
 
-## Specs
-
-*_TBD_*
+## Specifications
+| Spec | Input | Output |
+| :-------------     | :------------- | :------------- |
+| **Player starts game** | Player clicks "Start" button | The game starts|
+| **Player follows typing prompts** | The game prompts "Type <html>" Player types "<html>", then presses enter key | Player receives points and moves on to next prompt |
+| **Player misspells typing prompts**| The player misspells "<html>" to "<Httml>", then presses enter key | Player gets a bug notification, receives no points, and moves on to next prompt |
+| **Player wins or loses game**| Player views his/her results and presses "Retry" | The game starts again |
+| **Player wants to learn more about creators** | Player clicks "About Us" section of page | Redirects to "About Us" page with more info |
 
 
 
