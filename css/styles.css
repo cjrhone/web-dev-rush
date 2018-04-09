@@ -48,3 +48,15 @@ img{
 margin-top:10px;
 margin-bottom: 50px;
 }
+
+p {
+  color: grey;
+}
+
+h1 {
+  color: white;
+}
+
+h5 {
+  color: lightgrey;
+}
