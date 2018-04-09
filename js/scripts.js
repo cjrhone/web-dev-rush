@@ -1,6 +1,8 @@
 var nextStep=0;
 var bug=0;
 var testPrompt="<html>";
+var endEarly=false;
+var pointTimer;
 
 //add listener to get textbox input when a user presses enter
 function runScript(e){
@@ -9,6 +11,7 @@ function runScript(e){
     console.log(userInput);
     $('#inputBox').val("");
     testUserInput(userInput); //test input on enter press
+    clearInterval(pointTimer);
     startTimer();
   } else{}
 
@@ -25,20 +28,19 @@ function testUserInput(userInput){
 
 function startTimer(){
   var timeleft = 100;
-  var pointTimer = setInterval(function(){
-  timeleft--;
-  document.getElementById("pointTimer").textContent = timeleft;
-  if(timeleft <= 0)
-      clearInterval(downloadTimer);
+  pointTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("pointTimer").textContent = timeleft;
+    if(timeleft <= 0)
+      clearInterval(pointTimer);
   },1000);
 }
 
 $(document).ready(function() {
 
-$("#startGame").submit(function(event){
-  event.preventDefault();
-  $(".game").show();
-  $(".closeGame").hide();
+  $("#startGame").submit(function(event){
+    event.preventDefault();
+    $(".game").show();
+    $(".closeGame").hide();
+  });
 });
-});
-
