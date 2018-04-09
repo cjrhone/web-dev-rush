@@ -24,9 +24,9 @@ function testUserInput(userInput){
 
 
 $(document).ready(function() {
-  $("#terminal-form").submit(function(event) {
-
-    alert("you submitted inputted");
-
-  })
+$("#startGame").submit(function(event){
+  event.preventDefault();
+  $(".game").show();
+  $(".closeGame").hide();
+})
 })
