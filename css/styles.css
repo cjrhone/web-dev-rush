@@ -57,15 +57,15 @@
   margin: 5px;
 }
 
-<<<<<<< HEAD
-.game{
+
+/*.game{
     display: none;
 }
 img{
     margin-top:10px;
     margin-bottom: 50px;
-}
-=======
+}*/
+
 #instructions {
   padding: 25px;
   background-color: grey;
@@ -81,4 +81,3 @@ img{
   text-align: center;
   margin: 5px;
 }
->>>>>>> c3e1da9b617698e35a3538918db89edae74a23c2
