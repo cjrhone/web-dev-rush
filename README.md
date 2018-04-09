@@ -1,8 +1,8 @@
 # _Web Dev Rush_
 
-#### _Web Dev Rush, 4/3/18_
+#### _Web Dev Rush, 4/9/18_
 
-#### By _**CJ, Alex, Rio, Jim, and Azamat**_
+#### By _**CJ Rhone, Rio Atmadja, Azamat Bekmuratov, Alex Noble and Jim Palowski**_
 
 ## Description
 
@@ -32,11 +32,15 @@ _No known bugs_
 
 
 ## Technologies Used
-
-_HTML/CSS, Bootstrap, Howler, Animate, Javascript, jQuery _
+* HTML/CSS
+* Bootstrap
+* Howler
+* Animate
+* Javascript
+* jQuery
 
 ### License
 
 *This software is licensed under the MIT license.*
 
-Copyright (c) 2018 **_CJ Rhone_**
+Copyright (c) 2018 **_CJ Rhone, Rio Atmadja, Azamat Bekmuratov, Alex Noble and Jim Palowski_**
