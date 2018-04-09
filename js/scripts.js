@@ -44,7 +44,15 @@ function startTimer(){
     bonusPoints=timeleft;
     if(timeleft <= 0)
       clearInterval(pointTimer);
+      timeOver(); //function just to check if we can put some notification after time is over
   },1000);
+
+}
+
+function timeOver() {
+    if (timeleft==0) {
+      alert("Time is over!!!")
+    } else {}
 }
 
 function checkLoss(){
