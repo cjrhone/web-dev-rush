@@ -9,6 +9,7 @@ function runScript(e){
     console.log(userInput);
     $('#inputBox').val("");
     testUserInput(userInput); //test input on enter press
+    startTimer();
   } else{}
 
 }
@@ -22,11 +23,22 @@ function testUserInput(userInput){
   }
 }
 
+function startTimer(){
+  var timeleft = 100;
+  var pointTimer = setInterval(function(){
+  timeleft--;
+  document.getElementById("pointTimer").textContent = timeleft;
+  if(timeleft <= 0)
+      clearInterval(downloadTimer);
+  },1000);
+}
 
 $(document).ready(function() {
+
 $("#startGame").submit(function(event){
   event.preventDefault();
   $(".game").show();
   $(".closeGame").hide();
-})
-})
+});
+});
+
