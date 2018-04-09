@@ -13,6 +13,15 @@ var instruction =
 
 ["Create html tag", "Close html tag","Create head tag","Close head tag","Create title tag","Close title tag","Title your webpage","Create body tag","Close body tag","Create header 1 tag","Close header 1 tag","Type header title","Create div with a 'column' class","Close div tag","Link 'dog1.jpg' image from 'img' folder", "Create header 2 tag","Close header 2 tag","Type dog1 header","Create paragraph tag","Close paragraph tag","Type short dog1 description","Create div with 'column' class","Close div tag","Link 'dog2.jpg' image from 'img' folder","Create header 2 tag","Close header 2 tag","Type dog2 header","Create paragraph tag","Close paragraph tag","Type short dog2 description","Create div with 'column' class","Close div tag","Link 'dog3' image from 'img' folder","Create header 2 tag","Close header 2 tag","Type dog3 header","Create paragraph tag","Close paragraph tag","Type short dog3 description","Create space between divs","Create div with 'column' class","Close div tag","Link 'cat2.jpg' image from img folder","Create header 2 tag","Close header 2 tag","Type cat2 header","Create paragraph tag","Close paragraph tag","Type short cat2 description","Create div with 'column' class","Close div tag","Link 'cat1.jpg' image from img folder","Create header 2 tag","Close header 2 tag","Type cat1 header","Create paragraph tag","Close paragraph tag","Type short cat1 description","Create div with 'column' class","Close div tag","Link 'cat3.jpg' image in img folder","Create header 2 tag","Close header 2 tag","Type cat3 header","Create paragraph tag","Close paragraph tag","Type short cat3 description"];
 
+var correctSound = new Howl({
+  src: ['Assets/SFX/correct1.mp3']
+});
+
+var wrongSound = new Howl({
+  src: ['Assets/SFX/wrong1.mp3']
+});
+
+
 //add listener to get textbox input when a user presses enter
 function runScript(e){
   if (e.keyCode==13){
@@ -29,10 +38,12 @@ function runScript(e){
 function testUserInput(userInput){
   if (userInput===prompt[nextStep]){
     nextStep++;
+    correctSound.play();
     score=score+bonusPoints;
     timeleft=timeleft+10;
   } else{
     bug++;
+    wrongSound.play();
     nextStep++;
     timeleft=timeleft-5;
     checkLoss();

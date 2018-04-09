@@ -1,50 +1,62 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
 }
 
 li {
-    float: left;
+float: left;
 }
 
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
 }
 
 li a:hover {
-    background-color: #111;
+background-color: #111;
 }
 
 body{
-    text-align: center;
-    background-image: url(https://i.imgur.com/QTCRd0S.jpg);
-    background-size:     cover;                      /* <------ */
-      background-repeat:   no-repeat;
-      background-position: center center;
-      
+text-align: center;
+background-image: url(https://i.imgur.com/QTCRd0S.jpg);
+background-size: cover; /* <------ */
+background-repeat: no-repeat;
+background-position: center center;
+
 }
 
 .container{
-    margin-top: 350px;
-    
+margin-top: 350px;
+
 }
 
 button{
-    width:300px;
-    height:100px;
+width:300px;
+height:100px;
 }
 
 .game{
-    display: none;
+display: none;
 }
 img{
-    margin-top:10px;
-    margin-bottom: 50px;
+margin-top:10px;
+margin-bottom: 50px;
+}
+
+p {
+  color: grey;
+}
+
+h1 {
+  color: white;
+}
+
+h5 {
+  color: lightgrey;
 }
