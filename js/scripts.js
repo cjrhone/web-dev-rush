@@ -38,6 +38,7 @@ function testUserInput(userInput){
     checkLoss();
   }
   $('#testPrompt').text(prompt[nextStep]);
+  $('#testInstruction').text(instruction[nextStep]);
   $('#testHeader').text("Score: "+score+" Bugs: "+bug);
 }
 
@@ -70,6 +71,7 @@ function checkLoss(){
 $(document).ready(function() {
   startTimer();
   $('#testPrompt').text(prompt[nextStep]);
+  $('#testInstruction').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
     event.preventDefault();
     $(".game").show();
