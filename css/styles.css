@@ -69,12 +69,13 @@ h5 {
 #displayBox {
     background-color:  grey;
     background: rgba(192,192,192, 0.5);
-    width: 1110px;
-    height: 750px;
+    width: 730px;
+    height: 700px;
     text-align: center;
     border: 2px solid black;
-    padding-top: 500px;
+    padding-top: 100px;
     font-size: 100px;
+    margin-right:30px;
   }
   
   #title {
@@ -87,14 +88,16 @@ h5 {
     border: 2px solid black;
     text-align: center;
     margin: 5px;
-  
+    padding-bottom: 130px;
   }
+
   #scoreBox {
     padding: 25px;
     background-color: grey;
     border: 2px solid black;
     text-align: center;
     margin: 5px;
+    padding-bottom: 130px;
   }
   
   #font {
@@ -141,4 +144,10 @@ h5 {
     border: 2px solid black;
     text-align: center;
     margin: 5px;
+    padding-bottom: 140px;
+  }
+  
+  #victoryimg img{
+    width:90%;
+    height:auto;
   }
