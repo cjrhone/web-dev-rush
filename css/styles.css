@@ -90,6 +90,7 @@ h5 {
     /* padding-top: 100px; */
     font-size: 100px;
     margin-right:30px;
+    overflow-y: scroll;
   }
 
   #usernameInput {

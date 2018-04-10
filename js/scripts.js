@@ -26,9 +26,14 @@ var music = new Howl({
   src: ['Assets/SFX/Cosmic_Love.mp3']
 });
 
+var type = new Howl({
+  src:['Assets/SFX/keyboard_key.mp3']
+})
+
 
 //add listener to get textbox input when a user presses enter
 function runScript(e){
+
   if (e.keyCode==13){
     var userInput=$('#inputBox').val();
     console.log(userInput);
@@ -72,8 +77,6 @@ function testUserInput(userInput){
   $('#instructionText').text(instruction[nextStep]);
   $('#bugBoxText').text("Bugs: "+bug);
   $('#scoreText').text("Score: "+score);
-
-  showNextStep();
 }
 
 function startTimer(){
@@ -116,8 +119,10 @@ function checkLoss(){
     // alert("Game Over");
     $(".game-over").show();
     $(".playGame").hide();
+    $("#score").text(score);
 
   } else{}
+    // window.location.href = "victory.html"
 }
 
 function resetGame(){
@@ -128,20 +133,29 @@ function resetGame(){
   var timeleft=20;
 }
 
-function showNextStep(){
-  document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
-}
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
-  startTimer();
-  music.play();
+
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
+    startTimer();
+    music.play();
     event.preventDefault();
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
+
+
   });
+  $("#tryAgain").click(function() {
+    $(".playGame").show();
+    $(".game-over").hide();
+    $(".game").show();
+    $(".closeGame").hide();
+    $(".playGame").show();
+
+  });
+
 });
