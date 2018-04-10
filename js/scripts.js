@@ -128,8 +128,11 @@ function checkLoss(){
 }
 
 function clearLines(){
-  for (var x=0; x<prompt.size; x++){
-    document.getElementById("step"+x).textContent="";
+  document.getElementById("step1").textContent="work";
+  for (var x=1; x<=prompt.length; x++){
+    if (document.getElementById("step"+x)!=null){
+      document.getElementById("step"+x).textContent="";
+    } else{}
   }
 }
 
