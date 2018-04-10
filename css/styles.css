@@ -91,7 +91,8 @@ h5 {
     border: 2px solid black;
     text-align: center;
     margin: 5px;
-    padding-bottom: 130px;
+    font-size: 25px;
+    font-weight: bold;
   }
 
   #scoreBox {
@@ -100,7 +101,9 @@ h5 {
     border: 2px solid black;
     text-align: center;
     margin: 5px;
-    padding-bottom: 130px;
+    font-size: 25px;
+    font-weight: bold;
+
   }
 
   #font {
@@ -123,6 +126,7 @@ h5 {
 
   #inputBox {
     height: 50px;
+    width: 730px;
   }
 
   #prompts {
@@ -147,7 +151,9 @@ h5 {
     border: 2px solid black;
     text-align: center;
     margin: 5px;
-    padding-bottom: 140px;
+    font-size: 25px;
+    font-weight: bold;
+
   }
 
   #victoryimg img{
