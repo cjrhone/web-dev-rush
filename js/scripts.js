@@ -26,6 +26,10 @@ var music = new Howl({
   src: ['Assets/SFX/Cosmic_Love.mp3']
 });
 
+var type = new Howl({
+  src:['Assets/SFX/keyboard_key.mp3']
+})
+
 
 //add listener to get textbox input when a user presses enter
 function runScript(e){
@@ -73,8 +77,6 @@ function testUserInput(userInput){
   $('#instructionText').text(instruction[nextStep]);
   $('#bugBoxText').text("Bugs: "+bug);
   $('#scoreText').text("Score: "+score);
-
-  showNextStep();
 }
 
 function startTimer(){
@@ -105,6 +107,7 @@ function checkLoss(){
     $("#finalScore").text(score);
 
   } else{}
+    // window.location.href = "victory.html"
 }
 
 function clearLines(){
@@ -131,12 +134,10 @@ function resetGame(){
   $('#scoreText').text("Score: "+score);
 }
 
-function showNextStep(){
-  document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
-}
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
+
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
@@ -146,7 +147,10 @@ $(document).ready(function() {
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
+
+
   });
+
 
   $("#retryButton").click(function(){
     resetGame();
@@ -154,4 +158,5 @@ $(document).ready(function() {
     $(".playGame").show();
     startTimer();
   });
+
 });
