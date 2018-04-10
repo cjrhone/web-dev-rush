@@ -1,0 +1,84 @@
+#displayBox {
+  background-color:  grey;
+  background: rgba(192,192,192, 0.5);
+  width: 1110px;
+  height: 750px;
+  text-align: center;
+  border: 2px solid black;
+  
+  font-size: 100px;
+}
+
+#title {
+  text-align: center;
+}
+
+#timeLimit {
+  padding: 25px;
+  background-color: grey;
+  border: 2px solid black;
+  text-align: center;
+  margin: 5px;
+
+}
+#scoreBox {
+  padding: 25px;
+  background-color: grey;
+  border: 2px solid black;
+  text-align: center;
+  margin: 5px;
+}
+
+#font {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#footer {
+  text-align: center;
+  font-size: 15px;
+  margin: 5px;
+  color:red;
+}
+
+#title {
+  font-size: 50px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#inputBox {
+  height: 50px;
+}
+
+#prompts {
+  padding: 25px;
+  background-color: grey;
+  border: 2px solid black;
+  text-align: center;
+  margin: 5px;
+}
+
+#instructions {
+  padding: 25px;
+  background-color: grey;
+  border: 2px solid black;
+  text-align: center;
+  margin: 5px;
+}
+
+#bugBox {
+  padding: 25px;
+  background-color: grey;
+  border: 2px solid black;
+  text-align: center;
+  margin: 5px;
+}
+
+body {
+
+  background-image:url(https://i.imgur.com/QTCRd0S.jpg);
+  background-size:     cover;                      /* <------ */
+   background-repeat:   no-repeat;
+   background-position: center center;
+}
