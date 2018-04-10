@@ -82,6 +82,14 @@ function checkLoss(){
   } else{}
 }
 
+function resetGame(){
+  var nextStep=0;
+  var bug=0;
+  var score=0;
+  var bonusPoints=0;
+  var timeleft=20;
+}
+
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
