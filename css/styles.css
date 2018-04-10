@@ -1,3 +1,7 @@
+h6{
+  text-align:left;
+}
+
 ul {
 list-style-type: none;
 margin: 0;
@@ -76,7 +80,7 @@ h5 {
     height: 700px;
     text-align: center;
     border: 2px solid black;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     font-size: 100px;
     margin-right:30px;
   }
