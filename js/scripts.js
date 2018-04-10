@@ -87,5 +87,6 @@ $(document).ready(function() {
     event.preventDefault();
     $(".game").show();
     $(".closeGame").hide();
+    $(".playGame").show();
   });
 });
