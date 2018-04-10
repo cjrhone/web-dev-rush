@@ -119,18 +119,34 @@ function checkLoss(){
     // alert("Game Over");
     $(".game-over").show();
     $(".playGame").hide();
-    $("#score").text(score);
+    $("#finalScore").text(score);
 
   } else{}
     // window.location.href = "victory.html"
 }
 
+function clearLines(){
+  for (var x=0; x<prompt.size; x++){
+    document.getElementById("step"+x).textContent="";
+  }
+}
+
 function resetGame(){
-  var nextStep=0;
-  var bug=0;
-  var score=0;
-  var bonusPoints=0;
-  var timeleft=20;
+  clearInterval(pointTimer);
+  timeleft=20;
+  $("timeLimitText").text("20");
+  nextStep=0;
+  bug=0;
+  score=0;
+  bonusPoints=0;
+  clearLines();
+  $(".bugimg1").hide();
+  $(".bugimg2").hide();
+  $(".bugimg3").hide();
+  $('#promptText').text(prompt[nextStep]);
+  $('#instructionText').text(instruction[nextStep]);
+  $('#bugBoxText').text("Bugs: "+bug);
+  $('#scoreText').text("Score: "+score);
 }
 
 // USER INTERFACE LOGIC
@@ -149,13 +165,13 @@ $(document).ready(function() {
 
 
   });
-  $("#tryAgain").click(function() {
-    $(".playGame").show();
-    $(".game-over").hide();
-    $(".game").show();
-    $(".closeGame").hide();
-    $(".playGame").show();
 
+
+  $("#retryButton").click(function(){
+    resetGame();
+    $(".game-over").hide();
+    $(".playGame").show();
+    startTimer();
   });
 
 });
