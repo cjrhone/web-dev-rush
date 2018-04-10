@@ -60,3 +60,85 @@ h1 {
 h5 {
   color: lightgrey;
 }
+
+.playGame{
+    display: none;
+}
+
+
+#displayBox {
+    background-color:  grey;
+    background: rgba(192,192,192, 0.5);
+    width: 1110px;
+    height: 750px;
+    text-align: center;
+    border: 2px solid black;
+    padding-top: 500px;
+    font-size: 100px;
+  }
+  
+  #title {
+    text-align: center;
+  }
+  
+  #timeLimit {
+    padding: 25px;
+    background-color: grey;
+    border: 2px solid black;
+    text-align: center;
+    margin: 5px;
+  
+  }
+  #scoreBox {
+    padding: 25px;
+    background-color: grey;
+    border: 2px solid black;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  #font {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  #footer {
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+    color:red;
+  }
+  
+  #title {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  #inputBox {
+    height: 50px;
+  }
+  
+  #prompts {
+    padding: 25px;
+    background-color: grey;
+    border: 2px solid black;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  #instructions {
+    padding: 25px;
+    background-color: grey;
+    border: 2px solid black;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  #bugBox {
+    padding: 25px;
+    background-color: grey;
+    border: 2px solid black;
+    text-align: center;
+    margin: 5px;
+  }
