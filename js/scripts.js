@@ -46,11 +46,17 @@ function testUserInput(userInput){
     correctSound.play();
     score=score+bonusPoints;
     timeleft=timeleft+10;
+    $('#correctTimeBonus').show();
+    $('#correctTimeBonus').text("+10 seconds");
+    $('#correctTimeBonus').fadeOut(800);
   } else{
     bug++;
     wrongSound.play();
     nextStep++;
     timeleft=timeleft-5;
+    $('#incorrectTimeBonus').show();
+    $('#incorrectTimeBonus').text("-5 seconds");
+    $('#incorrectTimeBonus').fadeOut(800);
     checkLoss();
   }
   if(bug ===1){
@@ -66,6 +72,7 @@ function testUserInput(userInput){
   $('#instructionText').text(instruction[nextStep]);
   $('#bugBoxText').text("Bugs: "+bug);
   $('#scoreText').text("Score: "+score);
+
   showNextStep();
 }
 
