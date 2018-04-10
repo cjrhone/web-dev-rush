@@ -33,6 +33,7 @@ var type = new Howl({
 
 //add listener to get textbox input when a user presses enter
 function runScript(e){
+  type.play();
 
   if (e.keyCode==13){
     var userInput=$('#inputBox').val();
@@ -182,6 +183,10 @@ $(document).ready(function() {
     $(".game-over").hide();
     $(".playGame").show();
     startTimer();
+  });
+
+  $("#mainMenu").click(function() {
+    window.location.href = "index.html";
   });
 
 });
