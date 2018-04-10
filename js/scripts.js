@@ -73,13 +73,16 @@ function startTimer(){
 
 function timeOver() {
     if (timeleft==0) {
-      alert("Time is over!!!")
+      // alert("Time is over!!!")
     } else {}
 }
 
 function checkLoss(){
   if (bug==3){
-    alert("Game Over");
+    // alert("Game Over");
+    $(".game-over").show();
+    $(".playGame").hide();
+    
   } else{}
 }
 
