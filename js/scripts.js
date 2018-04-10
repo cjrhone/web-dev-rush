@@ -88,6 +88,21 @@ function startTimer(){
 
 }
 
+function highscoreCheck() {
+  if (score != 0) {
+        highscore = localStorage.getItem("scoreText");
+        if(highscore !== null){
+            if (score > highscore) {
+                localStorage.setItem("scoreText", score);
+            }
+        }
+        else{
+            localStorage.setItem("scoreText", score);
+        }
+  }
+  $('#highscoreText').text("Highscore: "+highscore);
+}
+
 function timeOver() {
     if (timeleft==0) {
       // alert("Time is over!!!")
