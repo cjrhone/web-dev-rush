@@ -77,6 +77,8 @@ function testUserInput(userInput){
   $('#instructionText').text(instruction[nextStep]);
   $('#bugBoxText').text("Bugs: "+bug);
   $('#scoreText').text("Score: "+score);
+
+  showNextStep();
 }
 
 function startTimer(){
@@ -148,6 +150,11 @@ function resetGame(){
   $('#bugBoxText').text("Bugs: "+bug);
   $('#scoreText').text("Score: "+score);
 }
+
+function showNextStep(){
+  document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
+}
+
 
 // USER INTERFACE LOGIC
 
