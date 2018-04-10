@@ -10,6 +10,13 @@ overflow: hidden;
 background-color: #333;
 }
 
+#correctTimeBonus{
+  color:green;
+}
+#incorrectTimeBonus{
+  color:red;
+}
+
 li {
 float: left;
 }
@@ -36,7 +43,7 @@ background-position: center center;
 }
 
 .container{
-margin-top: 350px;
+/*margin-top: 350px;*/
 
 }
 

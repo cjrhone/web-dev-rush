@@ -46,11 +46,17 @@ function testUserInput(userInput){
     correctSound.play();
     score=score+bonusPoints;
     timeleft=timeleft+10;
+    $('#correctTimeBonus').show();
+    $('#correctTimeBonus').text("+10 seconds");
+    $('#correctTimeBonus').fadeOut(800);
   } else{
     bug++;
     wrongSound.play();
     nextStep++;
     timeleft=timeleft-5;
+    $('#incorrectTimeBonus').show();
+    $('#incorrectTimeBonus').text("-5 seconds");
+    $('#incorrectTimeBonus').fadeOut(800);
     checkLoss();
   }
   if(bug ===1){
@@ -82,6 +88,8 @@ function startTimer(){
 
 function timeOver() {
     if (timeleft==0) {
+      $(".game-over").show();
+      $(".playGame").hide();
       // alert("Time is over!!!")
     } else {}
 }
@@ -91,9 +99,10 @@ function checkLoss(){
     // alert("Game Over");
     $(".game-over").show();
     $(".playGame").hide();
+    $("#score").text(score);
 
   } else{}
-    window.location.href = "victory.html"
+    // window.location.href = "victory.html"
 }
 
 function resetGame(){
@@ -116,5 +125,16 @@ $(document).ready(function() {
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
+
+
   });
+  $("#tryAgain").click(function() {
+    $(".playGame").show();
+    $(".game-over").hide();
+    $(".game").show();
+    $(".closeGame").hide();
+    $(".playGame").show();
+
+  });
+
 });
