@@ -143,3 +143,7 @@ h5 {
     margin: 5px;
   }
   
+  #victoryimg img{
+    width:90%;
+    height:auto;
+  }
