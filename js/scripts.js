@@ -93,6 +93,7 @@ function checkLoss(){
     $(".playGame").hide();
 
   } else{}
+    window.location.href = "victory.html"
 }
 
 function resetGame(){
