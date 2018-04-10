@@ -26,9 +26,14 @@ var music = new Howl({
   src: ['Assets/SFX/Cosmic_Love.mp3']
 });
 
+var type = new Howl({
+  src:['Assets/SFX/keyboard_key.mp3']
+})
+
 
 //add listener to get textbox input when a user presses enter
 function runScript(e){
+
   if (e.keyCode==13){
     var userInput=$('#inputBox').val();
     console.log(userInput);
@@ -116,11 +121,12 @@ function resetGame(){
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
-  startTimer();
-  music.play();
+
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
+    startTimer();
+    music.play();
     event.preventDefault();
     $(".game").show();
     $(".closeGame").hide();
