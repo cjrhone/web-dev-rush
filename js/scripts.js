@@ -53,15 +53,16 @@ function testUserInput(userInput){
     timeleft=timeleft-5;
     checkLoss();
   }
-  $('#testPrompt').text(prompt[nextStep]);
-  $('#testInstruction').text(instruction[nextStep]);
-  $('#testHeader').text("Score: "+score+" Bugs: "+bug);
+  $('#promptText').text(prompt[nextStep]);
+  $('#instructionText').text(instruction[nextStep]);
+  $('#bugBoxText').text("Bugs: "+bug);
+  $('#scoreText').text("Score: "+score);
 }
 
 function startTimer(){
   pointTimer = setInterval(function(){
     timeleft--;
-    document.getElementById("pointTimer").textContent = timeleft;
+    document.getElementById("timeLimitText").textContent = timeleft;
     bonusPoints=timeleft;
     if(timeleft <= 0)
       clearInterval(pointTimer);
@@ -95,8 +96,8 @@ function resetGame(){
 $(document).ready(function() {
   startTimer();
   music.play();
-  $('#testPrompt').text(prompt[nextStep]);
-  $('#testInstruction').text(instruction[nextStep]);
+  $('#promptText').text(prompt[nextStep]);
+  $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
     event.preventDefault();
     $(".game").show();
