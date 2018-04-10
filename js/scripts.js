@@ -90,6 +90,8 @@ function startTimer(){
 
 function timeOver() {
     if (timeleft==0) {
+      $(".game-over").show();
+      $(".playGame").hide();
       // alert("Time is over!!!")
     } else {}
 }
