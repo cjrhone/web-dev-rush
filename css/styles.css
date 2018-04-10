@@ -91,14 +91,8 @@ h5 {
     border: 2px solid black;
     text-align: center;
     margin: 5px;
-<<<<<<< HEAD
-    padding-bottom: 130px;
-    font-weight: bold;
-    font-size:30px;
-=======
     font-size: 25px;
     font-weight: bold;
->>>>>>> 614ee4c53b6919e53db29e880546327ba03d86dd
   }
 
   #scoreBox {
@@ -107,15 +101,9 @@ h5 {
     border: 2px solid black;
     text-align: center;
     margin: 5px;
-<<<<<<< HEAD
-    padding-bottom: 130px;
-    font-weight: bold;
-    font-size:30px;
-=======
     font-size: 25px;
     font-weight: bold;
 
->>>>>>> 614ee4c53b6919e53db29e880546327ba03d86dd
   }
 
   #font {
@@ -138,11 +126,7 @@ h5 {
 
   #inputBox {
     height: 50px;
-<<<<<<< HEAD
-    width: 720px;
-=======
     width: 730px;
->>>>>>> 614ee4c53b6919e53db29e880546327ba03d86dd
   }
 
   #prompts {
@@ -167,15 +151,9 @@ h5 {
     border: 2px solid black;
     text-align: center;
     margin: 5px;
-<<<<<<< HEAD
-    padding-bottom: 140px;
-    font-weight: bold;
-    font-size:30px;
-=======
     font-size: 25px;
     font-weight: bold;
 
->>>>>>> 614ee4c53b6919e53db29e880546327ba03d86dd
   }
 
   #victoryimg img{
