@@ -119,11 +119,12 @@ function showNextStep(){
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
-  startTimer();
-  music.play();
+
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
+    startTimer();
+    music.play();
     event.preventDefault();
     $(".game").show();
     $(".closeGame").hide();
