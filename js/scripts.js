@@ -29,7 +29,7 @@ var music = new Howl({
 
 //add listener to get textbox input when a user presses enter
 function runScript(e){
-  
+
   if (e.keyCode==13){
     var userInput=$('#inputBox').val();
     console.log(userInput);
@@ -102,16 +102,33 @@ function checkLoss(){
     // alert("Game Over");
     $(".game-over").show();
     $(".playGame").hide();
+    $("#finalScore").text(score);
 
   } else{}
 }
 
+function clearLines(){
+  for (var x=0; x<prompt.size; x++){
+    document.getElementById("step"+x).textContent="";
+  }
+}
+
 function resetGame(){
-  var nextStep=0;
-  var bug=0;
-  var score=0;
-  var bonusPoints=0;
-  var timeleft=20;
+  clearInterval(pointTimer);
+  timeleft=20;
+  $("timeLimitText").text("20");
+  nextStep=0;
+  bug=0;
+  score=0;
+  bonusPoints=0;
+  clearLines();
+  $(".bugimg1").hide();
+  $(".bugimg2").hide();
+  $(".bugimg3").hide();
+  $('#promptText').text(prompt[nextStep]);
+  $('#instructionText').text(instruction[nextStep]);
+  $('#bugBoxText').text("Bugs: "+bug);
+  $('#scoreText').text("Score: "+score);
 }
 
 function showNextStep(){
@@ -120,14 +137,21 @@ function showNextStep(){
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
-  startTimer();
-  music.play();
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
+    startTimer();
+    music.play();
     event.preventDefault();
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
+  });
+
+  $("#retryButton").click(function(){
+    resetGame();
+    $(".game-over").hide();
+    $(".playGame").show();
+    startTimer();
   });
 });
