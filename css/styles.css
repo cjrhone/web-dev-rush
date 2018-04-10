@@ -65,6 +65,9 @@ h5 {
     display: none;
 }
 
+.game-over {
+  display: none;
+}
 
 #displayBox {
     background-color:  grey;
