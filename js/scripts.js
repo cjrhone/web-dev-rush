@@ -119,18 +119,23 @@ $(document).ready(function() {
   startTimer();
   music.play();
   $('#promptText').text(prompt[nextStep]);
-  $('#instructionText').text(instruction[nextStep]);
+
   $("#startGame").submit(function(event){
     event.preventDefault();
+    $('#instructionText').text(instruction[nextStep]);
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
 
 
   });
+  // listen to the the click
   $("#tryAgain").click(function() {
     $(".playGame").show();
     $(".game-over").hide();
+    startTimer();
+    music.play();
+    $('#promptText').text(prompt[nextStep]);
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
