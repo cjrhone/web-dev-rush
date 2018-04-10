@@ -53,6 +53,15 @@ function testUserInput(userInput){
     timeleft=timeleft-5;
     checkLoss();
   }
+  if(bug ===1){
+    $(".bugimg1").show();
+  }
+  if(bug ===2){
+    $(".bugimg2").show();
+  }
+  if(bug===3){
+    $(".bugimg3").show();
+  }
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
   $('#bugBoxText').text("Bugs: "+bug);

@@ -158,3 +158,19 @@ h5 {
     width:90%;
     height:auto;
   }
+
+  #bugBox img{
+    width: 50px;
+    height:auto;
+  }
+
+.bugimg1{
+  display: none;
+}
+.bugimg2{
+  display: none;
+}
+
+.bugimg3{
+  display: none;
+}
