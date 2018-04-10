@@ -66,7 +66,6 @@ function testUserInput(userInput){
   $('#instructionText').text(instruction[nextStep]);
   $('#bugBoxText').text("Bugs: "+bug);
   $('#scoreText').text("Score: "+score);
-  showNextStep();
 }
 
 function startTimer(){
@@ -104,9 +103,6 @@ function resetGame(){
   var timeleft=20;
 }
 
-function showNextStep(){
-  document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
-}
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
