@@ -1,0 +1,463 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>C++ Program Typing Practice | SpeedCoder</title>
+
+
+  <!-- <meta http-equiv="pragma" content="no-cache" /> -->
+
+  <link rel="stylesheet" href="/static/CACHE/css/992dbd21bf23.css" type="text/css" />
+
+  <!--need to include full font-awesome package-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+	<link rel="icon" href="/static/img/favicon.ico" type="image/gif" sizes="16x16">
+	<meta charset='UTF-8'/>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+
+    <!--for responsiveness-->
+  <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+
+  <meta name=”description” content='Online Touch Typing Tutor For Programmers. Practice Languages such as C, C++, JavaScript... Reduce your Typing error and increase your typing speed'/>
+
+  <meta name="keywords" content="typing test, typing practice, typing tutor, programmers typing">
+
+
+<style type="text/css">
+/*.footer{height: 60px;background-color: #e3e3e3;margin-top: 50px;padding: 10px;text-align: center;}*/
+.footer1{height: 60px;background-color: #e3e3e3;padding: 10px;text-align: center;width: 100%;bottom: 0;left: 0}
+
+span2 {
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari */
+    transform: rotate(-120deg); /* Standard syntax */
+}
+
+.navbar-default{
+  background-color:red;
+}
+</style>
+
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85114704-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+
+</head>
+
+<body>
+
+<header>
+
+	<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span9 class="icon-bar"></span9>
+        <span9 class="icon-bar"></span9>
+        <span9 class="icon-bar"></span9>
+      </button>
+      <a href="/" style="color:#000" class="navbar-brand"><span92>⚡</span92><span91 style="margin-left:10px;font-family:monospace;font-weight:bold">SpeedCoder</span91>
+      </a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+
+        <li id="lessons"><a href="/lessons">Lessons</a></li>
+        <li id="customcode"><a href="/customcode">Upload Custom Code</a></li>
+        <li id="contribute"><a href="https://github.com/hiamandeep/speedcoder-keyboard-layouts">Contribute</a></li>
+        <li id=""><a href="/#uf" style="color:#53b06b">Upcoming features</a></li>
+
+        <!-- <li><a href="/tutor">Tutor</a></li>  -->
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="dropdown">
+          <button class="dropdown-toggle btn btn-default navbar-btn" data-toggle="dropdown" style="margin-left:10px">
+
+
+				Guest
+
+
+          <span9 class="caret"></span9>
+          </button>
+
+          <ul class="dropdown-menu">
+
+				<li><a href="/loginview">Login/Signup</a></li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+
+
+<div class="container-fluid" >
+
+  <div class="row" style="">
+  	<div class="col-md-2">
+  	<div class="visible-xs alert alert-danger">Please open this page on a larger display</div>
+
+ <iframe  src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fspeedcoder.net%2F&width=106&layout=button&action=like&size=small&show_faces=false&share=false&height=46&appId=342040872797083" width="106" height="23" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  <!-- <span54 style=""><g:plusone href="http://www.speedcoder.net/"></g:plusone></span54> -->
+
+	<div id="guide"	class="panel panel-default visible-lg">
+  	<div id="close" style="float:right;"><i style="cursor:pointer;" class="fa fa-times" aria-hidden="true"></i>&nbsp;</div>
+	  <div style="height:10px" class="panel-heading"></div>
+	  <div class="panel-body">
+	  <p id="helptext">
+	    look at the program and start typing the same.
+	  </p>
+	  <div style="text-align:center">
+		  <i style="color:#4D7EBF; cursor:pointer" id="circle1" class="fa fa-circle-thin" aria-hidden="true"></i>
+		  <i style="cursor:pointer" id="circle2" class="fa fa-circle-thin" aria-hidden="true"></i>
+		  <i style="cursor:pointer" id="circle3" class="fa fa-circle-thin" aria-hidden="true"></i>
+	  </div>
+	  </div>
+	</div>
+
+<div class="alert alert-success text-center hidden-xs hidden-sm"><label id="minutes">00</label>:<label id="seconds">00</label></div>
+
+<div class="dropdown visible-lg visible-md" style="margin-bottom:15px; ">
+
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span92 id="title_kl">Keyboard Layout</span92>
+    <span4 class="caret"></span4>
+	</button>
+
+    <ul class="dropdown-menu">
+      <li id="qw"><a onclick="changelayout('qwerty')">QWERTY</a></li>
+      <li id="dv"><a onclick="changelayout('dvorak')">DVORAK</a></li>
+      <li id="cm"><a onclick="changelayout('colemak')">COLEMAK</a></li>
+    </ul>
+
+</div>
+
+
+<div class="dropdown visible-lg visible-md" style="margin-bottom:15px;">
+
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span91 id="title_fc">Forced Correction</span91>
+    <span4 class="caret"></span4></button>
+
+    <ul class="dropdown-menu">
+      <li id="fc_on"><a onclick="changefc('on')">ON</a></li>
+      <li id="fc_off"><a onclick="changefc('off')">OFF</a></li>
+    </ul>
+
+</div>
+
+<!--
+		<div class="visible-lg alert alert-warning">Please <a href="/loginview">login</a> to save your progress, use other keyboard Layouts and turn off forced correction</div>
+ -->
+
+
+
+<a onclick="window.location.assign(window.location.href)" type="button" style="" class="btn btn-default visible-lg visible-md"><i class="fa fa-refresh" aria-hidden="true"></i> Reload</a>
+
+<!-- <a onclick="var keyb = document.getElementById('keyboard'); keyb.className += ' invisible'; var hands = document.getElementById('humanhands'); hands.className += ' invisible'; document.getElementById('main').style['height'] = '500px';" type="button" style="" class="btn btn-default visible-lg visible-md"><i class="fa fa-refresh" aria-hidden="true"></i> Hide</a>
+<a onclick="var keyb = document.getElementById('keyboard'); keyb.className -= ' invisible'; var hands = document.getElementById('humanhands'); hands.className -= ' invisible'; document.getElementById('main').style['height'] = '200px';" type="button" style="" class="btn btn-default visible-lg visible-md"><i class="fa fa-refresh" aria-hidden="true"></i> UNHide</a> -->
+
+
+
+<!-- <a onclick="hide_keyboard()" type="button" style="" id="togglehide" class="btn btn-default visible-lg visible-md"><i class="fa fa-refresh" aria-hidden="true"></i> Hide</a> -->
+
+<a onclick="hide_keyboard_cookie()" type="button" style="" id="togglehide1" class="btn btn-default visible-lg visible-md"><i class="fa fa-keyboard-o" aria-hidden="true"></i> Hide Keyboard</a>
+
+
+<!-- <a onclick="" type="button" style="" class="btn btn-default visible-lg visible-md"><i class="fa fa-refresh" aria-hidden="true"></i> UNHide</a> -->
+
+
+<div style="margin-top:15px;" class="hidden-xs hidden-sm">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6902567019114460"
+     data-ad-slot="8987356833"
+     data-ad-format="link"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+  	</div>
+
+  	<div class="col-md-7">
+
+	  <div style=""><pre id="main" style="position:relative;z-index:1;">void EngineExplorer::listEngines()
+{
+    m_engines-&gt;clear();
+    KPluginInfo::List engines = m_engineManager-&gt;listDataEngineInfo(m_app);
+    qSort(engines);
+
+    foreach (const KPluginInfo engine, engines) {
+        m_engines-&gt;addItem(QIcon::fromTheme(engine.icon()), engine.pluginName());
+    }
+
+    m_engines-&gt;setCurrentIndex(-1);
+}</pre></div>
+
+
+
+
+	  <div  id="keyboard" class="" style="border-top:solid #efefef;">
+		<ul class="ul-style">
+		<li class="key key-96  keyr-126 dual fin-1 dbackquote">~<br>`</li>
+		<li class="key key-49  keyr-33  dual fin-1 num1">!<br>1</li>
+		<li class="key key-50  keyr-64  dual fin-2 num2">@<br>2</li>
+		<li class="key key-51  keyr-35  dual fin-3 num3">#<br>3</li>
+		<li class="key key-52  keyr-36  dual fin-4 num4">$<br>4</li>
+		<li class="key key-53  keyr-37  dual fin-4 num5">%<br>5</li>
+		<li class="key key-54  keyl-94  dual fin-7 num6">^<br>6</li>
+		<li class="key key-55  keyl-38  dual fin-7 num7">&amp;<br>7</li>
+		<li class="key key-56  keyl-42  dual fin-8 num8">*<br>8</li>
+		<li class="key key-57  keyl-40  dual fin-9 num9">(<br>9</li>
+		<li class="key key-48  keyl-41  dual fin-10 num0">)<br>0</li>
+		<li class="key key-45  keyl-95  dual fin-10 dash">_<br>-</li>
+		<li class="key key-61  keyl-43  dual fin-10 equal">+<br>=</li>
+		<li class="key key-8   keyd-def backspace fin-10">Backspace</li>
+		<li class="key key-def keyd-def tab fin-1">Tab</li>
+		<li class="key key-113 keyr-81  letter fin-1 q">Q</li>
+		<li class="key key-119 keyr-87  letter fin-2 w">W</li>
+		<li class="key key-101 keyr-69  letter fin-3 e">E</li>
+		<li class="key key-114 keyr-82  letter fin-4 r">R</li>
+		<li class="key key-116 keyr-84  letter fin-4 t">T</li>
+		<li class="key key-121 keyl-89  letter fin-7 y">Y</li>
+		<li class="key key-117 keyl-85  letter fin-7 u">U</li>
+		<li class="key key-105 keyl-73  letter fin-8 i">I</li>
+		<li class="key key-111 keyl-79  letter fin-9 o">O</li>
+		<li class="key key-112 keyl-80  letter fin-10 p">P</li>
+		<li class="key key-91  keyl-123 fin-10 openbigbrace">{<br>[</li>
+		<li class="key key-93  keyl-125 fin-10 closebigbrace">}<br>]</li>
+		<li class="key key-92  keyl-124 backslash fin-10">|<br>\</li>
+		<li class="key key-def keyd-def capslock fin-1">CapsLock</li>
+		<li class="key key-97  keyr-65  letter fin-1 a">A</li>
+		<li class="key key-115 keyr-83  letter fin-2 s">S</li>
+		<li class="key key-100 keyr-68  letter fin-3 d">D</li>
+		<li class="key key-102 keyr-70  letter fin-4 f">F</li>
+		<li class="key key-103 keyr-71 letter fin-4 g">G</li>
+		<li class="key key-104 keyl-72  letter fin-7 h">H</li>
+		<li class="key key-106 keyl-74  letter fin-7 j">J</li>
+		<li class="key key-107 keyl-75  letter fin-8 k">K</li>
+		<li class="key key-108 keyl-76  letter fin-9 l">L</li>
+		<li class="key key-59  keyl-58  fin-10 semicolon">:<br>;</li>
+		<li class="key key-39  keyl-34  fin-10 singleinvertedcomma">"<br>'</li>
+		<li class="key key-10  keyd-def enter fin-10">Enter</li>
+		<li class="key key-sl  keyd-def shift-left fin-1">Shift</li>
+		<li class="key key-122 keyr-90  letter fin-1 z">Z</li>
+		<li class="key key-120 keyr-88  letter fin-2 x">X</li>
+		<li class="key key-99  keyr-67  letter fin-3 c">C</li>
+		<li class="key key-118 keyr-86  letter fin-4 v">V</li>
+		<li class="key key-98  keyr-66  letter fin-4 b">B</li>
+		<li class="key key-110 keyl-78  letter fin-7 n">N</li>
+		<li class="key key-109 keyl-77  letter fin-7 m">M</li>
+		<li class="key key-44  keyl-60  dual fin-8 lt">&lt;<br>,</li>
+		<li class="key key-46  keyl-62  dual fin-9 gt">&gt;<br>.</li>
+		<li class="key key-47  keyl-63  dual fin-10 forwardslash">?<br>/</li>
+		<li class="key key-sr  keyd-def shift-right fin-10">Shift</li>
+		<li class="key key-def keyd-def ctrl fin-1">Ctrl</li>
+		<li class="key key-def keyd-def fin-1">Fn</li>
+		<li class="key key-def keyd-def fin-1">win</li>
+		<li class="key key-def keyd-def fin-1">Alt</li>
+		<li class="key key-32  keyd-def spacebar fin-6">Space bar</li>
+		<li class="key key-def keyd-def letter fin-10">Alt</li>
+		<li class="key key-def keyd-def fin-10">win</li>
+		<li class="key key-def keyd-def ctrl fin-10">Ctrl</li>
+	</ul>
+  </div>
+
+
+
+
+
+	<div id="humanhands" class="myhands bottomDiv">
+	<div class="hand hand-left">
+
+			<div class="finger finger-1"></div>
+			<div class="finger finger-2"></div>
+			<div class="finger finger-3"></div>
+			<div class="finger finger-4"></div>
+			<div class="finger finger-5"></div>
+			<div class="dorsal left-dorsal"></div>
+
+	</div>
+
+	<div class="hand hand-right">
+			<div class="finger finger-6"></div>
+			<div class="finger finger-7"></div>
+			<div class="finger finger-8"></div>
+			<div class="finger finger-9"></div>
+			<div class="finger finger-10"></div>
+			<div class="dorsal right-dorsal"></div>
+
+	</div>
+
+	</div>
+
+<hr>
+     <!-- sc-leaderboard-index -->
+
+<div class="hidden-xs hidden-sm">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+           <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-6902567019114460"
+             data-ad-slot="9023089232"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+
+<!-- wierd bug: auto scrolls at bottom when all ads are removed in firefox only-->
+
+
+	</div> <!--end of md 7 -->
+
+<div class="col-md-3">
+
+<div style="float:right;" class="hidden-xs hidden-sm">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6902567019114460"
+     data-ad-slot="5110606830"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+</div>
+
+
+
+<!-- Modal -->
+<style>
+    .btnfoc{
+        background-color: green;
+
+    }
+</style>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Lesson Summary</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+
+        <a href="/lessons" type="button" class="btn btn-default">Home</a>
+
+        <a onclick="window.location.assign(window.location.href)" type="button" class="btn btn-default">Repeat Lesson</a>
+
+        <!-- <input  type="button" value="Next Lesson" class="btn btn-default" id="nextLessonBut"></input> -->
+
+        <!-- <a href="#" id="nextLessonBut" type="button" class="btn btn-default">Next Lesson</a> -->
+
+        <button onclick="helloworld()" type="button" class="btn btn-default btnfoc" autofocus>Next Lesson</button>
+
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</div>
+
+
+<div id="loading">
+  <img id="loading-image" src="/static/img/loader.gif" alt="Loading..." />
+</div>
+
+
+
+
+<div style="min-height:200px">
+
+</div>
+<!-- Site footer -->
+    <footer class="footer" style="margin-top:10px;padding:15px 5px; border-top:solid #efefef">
+      <p>&copy; 2018 <a target="__blank" href="https://www.linkedin.com/in/aman-deep-86596356"><b>Aman Deep</b></a>. All Rights Reserved.</p>
+        <p>for any enquiry or suggestion please contact: <a href="mailto:aman@speedcoder.net">aman@speedcoder.net</a></p>
+        <p><a href="https://www.facebook.com/speedcoder.net">Facebook</a> . <a href="https://www.twitter.com/speed_coder">Twitter</a> . <a href="https://plus.google.com/117932655323967721013">Google+</a> | <a href="/privacy">Privacy</a></p>
+      </footer>
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
+<script src="/static/js/jquery-2.1.0.min.js"></script> <!-- jquery must be loaded first -->
+<script src="/static/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js"></script> -->
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<script type="text/javascript" src="/static/CACHE/js/90550be6775a.js"></script>
+
+
+<!--if condition for home-->
+
+<script type="text/javascript" src="/static/CACHE/js/6f545c41089b.js"></script>
+
+
+
+
+  <script type="text/javascript" src="/static/CACHE/js/73863d0f866d.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript" src="/static/CACHE/js/70a2cc1ced5c.js"></script>
+
+ <!--end if condition for home -->
+
+
+<script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        window.location.href = window.location.href.split('#_=_')[0];
+    }
+
+    else if (window.location.hash && window.location.hash == '#') {
+        window.location.href = window.location.href.split('#')[0];
+    }
+</script>
+
+
+</body>
+
+</html>

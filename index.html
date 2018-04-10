@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/mini-solid-icons-vol-3/16/140-512.png">
-    <link rel="stylesheet" href="css/animate.css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/howler.core.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Web Dev Rush</title>
+<head>
+  <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/mini-solid-icons-vol-3/16/140-512.png">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/howler.core.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Web Dev Rush</title>
 
-  </head>
-    <ul>
-      <li><a class="active" href="#home">Home</a></li>
-      <li><a href="aboutus.html">About</a></li>
-    </ul>
-    <body>
-      <form id ="startGame">
+</head>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="aboutus.html">About</a></li>
+</ul>
+<body>
+  <form id ="startGame">
     <div class="container">
       <div class="closeGame">
-      <h1><img src="img/webdev.png"></h1>
-      <button type="submit" class="btn btn-success">Start</button>
+        <h1><img src="img/webdev.png"></h1>
+        <button type="submit" class="btn btn-success">Start</button>
       </div>
 
       <!--<div class="game">
-        <h5 id="testInstruction"></h5>
-    <h1 id="testPrompt"></h1>
-    <input id="inputBox" type="text" onkeypress="return runScript(event)"></input>
-    <h1 id="testHeader"></h1>
-    <p> Points <span id="pointTimer"> </span></p>
+      <h5 id="testInstruction"></h5>
+      <h1 id="testPrompt"></h1>
+      <input id="inputBox" type="text" onkeypress="return runScript(event)"></input>
+      <h1 id="testHeader"></h1>
+      <p> Points <span id="pointTimer"> </span></p>
     </div> -->
-    </div>
-    </form>
-    </div>
-    <div class="playGame">
+  </div>
+</form>
+</div>
+<div class="playGame">
   <div class="container">
     <h1 align="center"><span id="title">Web Dev Rush<span></h1>
-    <div class="row">
-
-  <div class="col-md-8">
-      <div class="well" id="displayBox">Display Box
-          <br/>
-
-      </div>
-  </div>
-  <div class="col-md-4">
       <div class="row">
-          <div class="col-md-6">
-              <br>
-              <div class="well" id="timeLimit"><span id="timeLimitText">Time: </span></div>
+
+
+        <div class="col-md-4" >
+          <div class="well" id="displayBox">Display Box
+            <br/>
+
           </div>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6">
+              <br>
+              <div class="well" id="timeLimit">Time Limit</div>
+            </div>
 
-      </div>
-      <div class="row">
+
+          </div>
+          <div class="row">
+
 
           <div class="col-md-6" >
               <div class="well" id="scoreBox"><span id="scoreText">Score: 0</span></div>
+
           </div>
+        </div>
       </div>
       <div class="row">
-
+        <div class="col-md-4">
+          <div class="well" id="prompts"> HTML Prompts</div>
+        </div>
+        <div class="col-md-4">
+          <div class="well" id="instructions">Instructions</div>
+        </div>
+        <div class="col-md-4">
+          <div class="well" id="bugBox">Bug Box</div>
+        </div>
       </div>
-      <div class="col-md-6">
-          <div class="well" id="bugBox"><span id="bugBoxText">Bugs: 0</span></div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <br>
+          <input class="form-control" type="text" placeholder="Input Box" id="inputBox">
+
+        </div>
       </div>
-  </div>
-</div>
+    </div>
 
-<div class="row">
-  <div class="col-md-6">
-      <div class="well" id="prompts"><span id="promptText"></span></div>
-  </div>
-  <div class="col-md-6">
-      <div class="well" id="instructions"><span id="instructionText"></span></div>
-  </div>
-  
-</div>
-
-<div class="row">
-<div class="col-md-12">
-  <br>
-  <input class="form-control" id="inputBox" type="text" onkeypress="return runScript(event)"></input>
-  </div>
-</div>
-</div>
   </div>
 
 </body>
 
 <!-- Footer -->
 <footer class="footer">
-<div class="container" id="foot">
-<hr class="my-4">
-<span id="footer"><p>&#169; 2018 <a href="index.html">Web-Dev-Rush</a>, by Epicodus Students .</p></span>
-</div>
-</div>
-  </body>
+
+  <div class="container" id="foot">
+    <hr class="my-4">
+    <span id="footer"><p>&#169; 2018 <a href="index.html">WebDushRush</a>, by Epicodus Students .</p></span>
+  </div>
+
+</body>
+
+
 </html>
