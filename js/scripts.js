@@ -1,5 +1,5 @@
 // BUSINESS LOGIC
-
+var misspelledWords = [];
 var nextStep=0;
 var bug=0;
 var score=0;
@@ -56,6 +56,7 @@ function testUserInput(userInput){
     $('#correctTimeBonus').text("+10 seconds");
     $('#correctTimeBonus').fadeOut(800);
   } else{
+    misspelledWords.push(prompt[nextStep]);
     bug++;
     wrongSound.play();
     nextStep++;
@@ -111,20 +112,14 @@ function highscoreCheck() {
 
 function timeOver() {
     if (timeleft==0) {
-      $(".game-over").show();
-      $(".playGame").hide();
-      // alert("Time is over!!!")
+      gameOver();
     } else {}
 }
 
 function checkLoss(){
   if (bug==3){
     // alert("Game Over");
-    $(".game-over").show();
-    $(".playGame").hide();
-    // $("#highestScore").text(highscore);
-    $("#finalScore").text(score);
-
+    gameOver();
   } else{}
     // window.location.href = "victory.html"
 }
@@ -138,6 +133,13 @@ function clearLines(){
   }
 }
 
+function gameOver(){
+  $(".game-over").show();
+  $(".playGame").hide();
+  $("#finalScore").text(score);
+  showMisspelledWords();
+}
+
 function resetGame(){
   clearInterval(pointTimer);
   timeleft=20;
@@ -147,6 +149,7 @@ function resetGame(){
   score=0;
   bonusPoints=0;
   clearLines();
+  misspelledWords=[];
   $(".bugimg1").hide();
   $(".bugimg2").hide();
   $(".bugimg3").hide();
@@ -160,7 +163,9 @@ function showNextStep(){
   document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
 }
 
-
+function showMisspelledWords(){
+  document.getElementById("misspelledList").textContent=misspelledWords;
+}
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
