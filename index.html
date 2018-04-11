@@ -35,50 +35,46 @@
     <div class="playGame">
       <div class="container">
 
-
+        <!-- canvas starts -->
         <div class="col-md-12 canvas">
 
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-6">
                   <div class="well" id="prompts"><span id="promptText"></span></div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="well" id="scoreBox"><span id="scoreText">Score: 0</span></div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="well" id="timeLimit">Time: <span id="timeLimitText"></span> <span id="correctTimeBonus"></span><span id="incorrectTimeBonus"></span></div>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-6">
-                  <br>
+
                   <input class="form-control" id="inputBox" type="text" onkeypress="return runScript(event)"></input>
                 </div>
 
                 <div class="col-md-6">
-                  <br>
+
                     <div class="well" id="bugBox"><span id="bugBoxText">Bugs: 0</span>
-                      <span class="bugimg1"><p><img src="Assets/graphics/bug1.png"></span><span class="bugimg2"><img src="Assets/graphics/bug1.png"></span>
-                        <span class="bugimg3"><img src="Assets/graphics/bug1.png"></span></p>
+                      <span class="bugimg1"><img src="Assets/graphics/bug1.png"></span><span class="bugimg2"><img src="Assets/graphics/bug1.png"></span>
+                        <span class="bugimg3"><img src="Assets/graphics/bug1.png"></span>
                     </div>
                 </div>
               </div>
 
 
               <div class="row">
-                <div class="col-md-2">
-                  <br>
-                  <div class="row">
-                    <div class="well" id="ProgressBox"><span id="ProgressText">Prgs</span></div>
-                  </div>
+                <div class="col-md-1">
+                    <div class="well" id="progress-box"><span id="progress-text">Prgs</span></div>
+
                 </div>
 
                 <div class="col-md-5">
-                  <br>
-                  <div class="row">
                     <div class="well" id="displayBox">
                       <h6 class="displayLines" id="step1"></h6>
                       <h6 class="displayLines" id="step2"></h6>
@@ -122,14 +118,10 @@
                       <h6 class="displayLines" id="step10"></h6>
                       <h6 class="displayLines" id="step3"></h6>
                     </div>
-                  </div>
                 </div>
 
-                <div class="col-md-5">
-                  <br>
-                  <div class="row">
+                <div class="col-md-6">
                     <div class="well" id="PreviewBox">Preview
-                    </div>
                   </div>
 
                 </div>
