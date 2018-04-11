@@ -122,6 +122,7 @@ function checkLoss(){
     // alert("Game Over");
     $(".game-over").show();
     $(".playGame").hide();
+    // $("#highestScore").text(highscore);
     $("#finalScore").text(score);
 
   } else{}
