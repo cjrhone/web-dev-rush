@@ -174,7 +174,7 @@ $(document).ready(function() {
   $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
     startTimer();
-    music.play();
+    // music.play();
     event.preventDefault();
     $(".game").show();
     $(".closeGame").hide();
