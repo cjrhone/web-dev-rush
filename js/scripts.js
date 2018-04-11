@@ -172,15 +172,24 @@ $(document).ready(function() {
 
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
+
   $("#startGame").submit(function(event){
-    startTimer();
-    // music.play();
     event.preventDefault();
+    $(".instructions").show();
+    $(".closeGame").hide();
+
+
+
+  });
+
+  $("#continue").click(function() {
+    $(".instructions").hide();
+    startTimer();
+    music.play();
+
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
-
-
   });
 
 
