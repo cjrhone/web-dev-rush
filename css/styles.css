@@ -213,14 +213,15 @@ h5 {
   display: none;
 }
 
-#personals {
+@font-face {
+  font-family: "Nasalization";
+	src: url('../nasalization/nasalization-rg.ttf');
+}
+
+#pesonels {
   display: none;
 }
 
-@font-face {
-  font-family: "Nasalization";
-	src: url('Nasalization-Regular.ttf');
-}
 
 .jumbotron {
   background-image: url("http://cdn.blog.psafe.com/en/blog/wp-content/uploads/2016/10/BLOG_EN_0510_Most-Useful-Coding-and-Programming-Languages-to-Know.jpg");
