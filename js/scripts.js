@@ -197,8 +197,8 @@ $(document).ready(function() {
 
   // it will toggle the page, once user click the action button
   $("#action").click(function() {
-    $("#pesonels").slideToggle();
-    $("#pesonels").css({display: "flex"});
+    $("#personals").slideToggle();
+    $("#personals").css({display: "flex"});
   });
 
 });
