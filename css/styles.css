@@ -103,7 +103,7 @@ h5 {
     margin-bottom: 35px;
     border-radius: 50px;
   }
-  
+
   #title {
     text-align: center;
   }
@@ -216,4 +216,7 @@ h5 {
 @font-face { 
   font-family: "Nasalization"; 
 	src: url('Nasalization-Regular.ttf'); 
+}
+#pesonels {
+  display: none;
 }
