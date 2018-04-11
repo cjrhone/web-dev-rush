@@ -5,7 +5,7 @@
   height: 750px;
   text-align: center;
   border: 2px solid black;
-  
+
   font-size: 100px;
 }
 
@@ -58,14 +58,23 @@
   text-align: center;
   margin: 5px;
 }
+.instructions {
+  display: none;
 
-#instructions {
-  padding: 25px;
-  background-color: grey;
-  border: 2px solid black;
-  text-align: center;
-  margin: 5px;
 }
+
+p#instruction {
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+}
+
+h3#instruction {
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+}
+
 
 #bugBox {
   padding: 25px;

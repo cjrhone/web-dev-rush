@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- TEST -->
 <!-- This is a test to the review branch -->
+<!--Test comment for end of day commit -->
 <html>
   <head>
     <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/mini-solid-icons-vol-3/16/140-512.png">
@@ -47,6 +48,108 @@
 
     <div class="playGame">
       <div class="container">
+
+        <!-- canvas starts -->
+        <div class="col-md-12 canvas">
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="well" id="prompts"><span id="promptText"></span></div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="well" id="scoreBox"><span id="scoreText">Score: 0</span></div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="well" id="timeLimit">Time: <span id="timeLimitText"></span> <span id="correctTimeBonus"></span><span id="incorrectTimeBonus"></span></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+
+                  <input class="form-control" id="inputBox" type="text" onkeypress="return runScript(event)"></input>
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="well" id="bugBox"><span id="bugBoxText">Bugs: 0</span>
+                      <span class="bugimg1"><img src="Assets/graphics/bug1.png"></span><span class="bugimg2"><img src="Assets/graphics/bug1.png"></span>
+                        <span class="bugimg3"><img src="Assets/graphics/bug1.png"></span>
+                    </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-1">
+                    <div class="well" id="progress-box"><span id="progress-text">Prgs</span></div>
+
+                </div>
+
+                <div class="col-md-5">
+                    <div class="well" id="displayBox">
+                      <h6 class="displayLines" id="step1"></h6>
+                      <h6 class="displayLines" id="step2"></h6>
+                      <h6 class="displayLines" id="step4"></h6>
+                      <h6 class="displayLines" id="line4"></h6>
+                      <h6 class="displayLines" id="line5"><span id=step6></span><span id=step8></span><span id=step7></span></h6>
+                      <h6 class="displayLines" id="step5"></h6>
+                      <h6 class="displayLines" id="step9"></h6>
+                      <h6 class="displayLines" id="line8"><span id=step11></span><span id=step13></span><span id=step12></span></h6>
+                      <h6 class="displayLines" id="step14"></h6>
+                      <h6 class="displayLines" id="step16"></h6>
+                      <h6 class="displayLines" id="line11"><span id=step17></span><span id=step19></span><span id=step18></span></h6>
+                      <h6 class="displayLines" id="line12"><span id=step20></span><span id=step22><span id=step21></span></h6>
+                      <h6 class="displayLines" id="step15"></h6>
+                      <h6 class="displayLines" id="step23"></h6>
+                      <h6 class="displayLines" id="step25"></h6>
+                      <h6 class="displayLines" id="line16"><span id=step26></span><span id=step28></span><span id=step27></span></h6>
+                      <h6 class="displayLines" id="line17"><span id=step29></span><span id=step31></span><span id=step30></span></h6>
+                      <h6 class="displayLines" id="step24"></h6>
+                      <h6 class="displayLines" id="step32"></h6>
+                      <h6 class="displayLines" id="step34"></h6>
+                      <h6 class="displayLines" id="line21"><span id=step35></span><span id=step37></span><span id=step36></span></h6>
+                      <h6 class="displayLines" id="line22"><span id=step38></span><span id=step40></span><span id=step39></span></h6>
+                      <h6 class="displayLines" id="step33"></h6>
+                      <h6 class="displayLines" id="step41"></h6>
+                      <h6 class="displayLines" id="step42"></h6>
+                      <h6 class="displayLines" id="step44"></h6>
+                      <h6 class="displayLines" id="line27"><span id=step45></span><span id=step47></span><span id=step46></span></h6>
+                      <h6 class="displayLines" id="line28"><span id=step48></span><span id=step50></span><span id=step49></span></h6>
+                      <h6 class="displayLines" id="step43"></h6>
+                      <h6 class="displayLines" id="step51"></h6>
+                      <h6 class="displayLines" id="step53"></h6>
+                      <h6 class="displayLines" id="line32"><span id=step54></span><span id=step56></span><span id=step55></span></h6>
+                      <h6 class="displayLines" id="line33"><span id=step57></span><span id=step59></span><span id=step58></span></h6>
+                      <h6 class="displayLines" id="step52"></h6>
+                      <h6 class="displayLines" id="step60"></h6>
+                      <h6 class="displayLines" id="step62"></h6>
+                      <h6 class="displayLines" id="line37"><span id=step63></span><span id=step65></span><span id=step64></span></h6>
+                      <h6 class="displayLines" id="line38"><span id=step67></span><span id=step69></span><span id=step68></span></h6>
+                      <h6 class="displayLines" id="step61"></h6>
+                      <h6 class="displayLines" id="step10"></h6>
+                      <h6 class="displayLines" id="step3"></h6>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="well" id="PreviewBox">Preview
+                  </div>
+
+                </div>
+              </div>
+
+        </div>
+
+      </div>
+    </div>
+
+        <!-- canvas -->
+
+
+        <!--
         <h1 align="center"><span id="title"><img src="img/webdev.png"><span></h1>
           <div class="row">
 
@@ -97,17 +200,17 @@
             </div>
             <div class="col-md-4">
 
-              <!-- Time Limit  -->
-              <div class="row">
+              <!- Time Limit  -->
+              <!-- <div class="row">
                 <div class="col-md-6">
                   <br>
                   <div class="well" id="timeLimit">Time: <span id="timeLimitText"></span> <span id="correctTimeBonus"></span><span id="incorrectTimeBonus"></span></div>
                 </div>
               </div>
-              <!-- Time Limit  -->
+              <!- Time Limit  -->
 
               <!-- Score Box  -->
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-md-6" >
                   <div class="well" id="scoreBox"><span id="scoreText">Score: 0</span></div>
                 </div>
@@ -129,36 +232,36 @@
               </div>
             </div>
           </div>
-            <!-- Score Box  -->
+            <!- Score Box  -->
 
           <!-- Prompt Box  -->
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-4">
               <div class="well" id="prompts"><span id="promptText"></span>
-              </div>
+              </div> -->
           <!-- Prompt Box  -->
 
 
           <!-- Instruction Box  -->
-            </div>
+            <!-- </div>
             <div class="col-md-4">
               <div class="well" id="instructions"><span id="instructionText"></span></div>
             </div>
-            <!-- Instruction Box  -->
+            <!- Instruction Box  -->
 
 
 
           <!-- Input Box -->
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-12">
               <br>
               <input class="form-control" id="inputBox" type="text" onkeypress="return runScript(event)"></input>
             </div>
-          </div>
+          </div> -->
           <!-- Input Box -->
-        </div>
-      </div>
-    </div>
+        <!-- </div> -->
+      <!-- </div>
+    </div> -->
 
           <!-- Game Over -->
           <div class="game-over">
@@ -182,6 +285,100 @@
               <h1>Misspelled words: <span id="misspelledList"></span></h1>
             </div>
             <!-- Game Over -->
+
+            <!-- /*changes for canvas*/ -->
+            <!-- <div class="container">
+              <div class="col-md-12 canvas">
+
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="well" id="canvasPrompts"><span id="canvasPromptText">Prompt</span></div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="well" id="canvasScoreBox"><span id="canvasScoreText">Score: 0</span></div>
+                      </div>
+
+                      <div class="col-md-2">
+                        <div class="well" id="canvasTimeLimit">Time: <span id="canvasTimeLimitText"></span></div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input class="form-control" id="canvasInputBox" type="text" onkeypress="return runScript(event)"></input>
+                      </div>
+
+                      <div class="col-md-6">
+                          <div class="well" id="canvasBugBox"><span id="canvasBugBoxText">Bugs: 0</span>
+                            <span class="bugimg1"><p><img src="Assets/graphics/bug1.png"></span><span class="bugimg2"><img src="Assets/graphics/bug1.png"></span>
+                            <span class="bugimg3"><img src="Assets/graphics/bug1.png"></span></p>
+                          </div>
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                      <div class="col-md-2">
+                        <div class="well" id="canvasProgressBox"><span id="canvasProgressText">Progress</span></div>
+                      </div>
+
+                      <div class="col-md-5">
+                        <div class="well" id="canvasDisplayBox">
+                          <h6 class="displayLines" id="step1"></h6>
+                          <h6 class="displayLines" id="step2"></h6>
+                          <h6 class="displayLines" id="step4"></h6>
+                          <h6 class="displayLines" id="line4"></h6>
+                          <h6 class="displayLines" id="line5"><span id=step6></span><span id=step8></span><span id=step7></span></h6>
+                          <h6 class="displayLines" id="step5"></h6>
+                          <h6 class="displayLines" id="step9"></h6>
+                          <h6 class="displayLines" id="line8"><span id=step11></span><span id=step13></span><span id=step12></span></h6>
+                          <h6 class="displayLines" id="step14"></h6>
+                          <h6 class="displayLines" id="step16"></h6>
+                          <h6 class="displayLines" id="line11"><span id=step17></span><span id=step19></span><span id=step18></span></h6>
+                          <h6 class="displayLines" id="line12"><span id=step20></span><span id=step22><span id=step21></span></h6>
+                          <h6 class="displayLines" id="step15"></h6>
+                          <h6 class="displayLines" id="step23"></h6>
+                          <h6 class="displayLines" id="step25"></h6>
+                          <h6 class="displayLines" id="line16"><span id=step26></span><span id=step28></span><span id=step27></span></h6>
+                          <h6 class="displayLines" id="line17"><span id=step29></span><span id=step31></span><span id=step30></span></h6>
+                          <h6 class="displayLines" id="step24"></h6>
+                          <h6 class="displayLines" id="step32"></h6>
+                          <h6 class="displayLines" id="step34"></h6>
+                          <h6 class="displayLines" id="line21"><span id=step35></span><span id=step37></span><span id=step36></span></h6>
+                          <h6 class="displayLines" id="line22"><span id=step38></span><span id=step40></span><span id=step39></span></h6>
+                          <h6 class="displayLines" id="step33"></h6>
+                          <h6 class="displayLines" id="step41"></h6>
+                          <h6 class="displayLines" id="step42"></h6>
+                          <h6 class="displayLines" id="step44"></h6>
+                          <h6 class="displayLines" id="line27"><span id=step45></span><span id=step47></span><span id=step46></span></h6>
+                          <h6 class="displayLines" id="line28"><span id=step48></span><span id=step50></span><span id=step49></span></h6>
+                          <h6 class="displayLines" id="step43"></h6>
+                          <h6 class="displayLines" id="step51"></h6>
+                          <h6 class="displayLines" id="step53"></h6>
+                          <h6 class="displayLines" id="line32"><span id=step54></span><span id=step56></span><span id=step55></span></h6>
+                          <h6 class="displayLines" id="line33"><span id=step57></span><span id=step59></span><span id=step58></span></h6>
+                          <h6 class="displayLines" id="step52"></h6>
+                          <h6 class="displayLines" id="step60"></h6>
+                          <h6 class="displayLines" id="step62"></h6>
+                          <h6 class="displayLines" id="line37"><span id=step63></span><span id=step65></span><span id=step64></span></h6>
+                          <h6 class="displayLines" id="line38"><span id=step67></span><span id=step69></span><span id=step68></span></h6>
+                          <h6 class="displayLines" id="step61"></h6>
+                          <h6 class="displayLines" id="step10"></h6>
+                          <h6 class="displayLines" id="step3"></h6>
+                        </div>
+                      </div>
+
+                      <div class="col-md-5">
+                        <div class="well" id="canvasPreviewBox">Preview
+                        </div>
+                      </div>
+                    </div>
+
+              </div>
+            </div> -->
+            <!-- /*changes for canvas*/ -->
+
 
 
 
