@@ -233,3 +233,22 @@ h5 {
   font-style: italic;
   font-size: 20px;
 }
+.instructions {
+  display: none;
+
+}
+p#instruction {
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+}
+
+h3#instruction {
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+}
+
+img#instruction {
+  max-width:  100%;
+}
