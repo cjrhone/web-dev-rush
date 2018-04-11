@@ -1,5 +1,5 @@
 // BUSINESS LOGIC
-
+var misspelledWords = [];
 var nextStep=0;
 var bug=0;
 var score=0;
@@ -26,9 +26,15 @@ var music = new Howl({
   src: ['Assets/SFX/Cosmic_Love.mp3']
 });
 
+var type = new Howl({
+  src:['Assets/SFX/keyboard_key.mp3']
+})
+
 
 //add listener to get textbox input when a user presses enter
 function runScript(e){
+  type.play();
+
   if (e.keyCode==13){
     var userInput=$('#inputBox').val();
     console.log(userInput);
@@ -50,6 +56,7 @@ function testUserInput(userInput){
     $('#correctTimeBonus').text("+10 seconds");
     $('#correctTimeBonus').fadeOut(800);
   } else{
+    misspelledWords.push(prompt[nextStep]);
     bug++;
     wrongSound.play();
     nextStep++;
@@ -72,6 +79,8 @@ function testUserInput(userInput){
   $('#instructionText').text(instruction[nextStep]);
   $('#bugBoxText').text("Bugs: "+bug);
   $('#scoreText').text("Score: "+score);
+
+  showNextStep();
 }
 
 function startTimer(){
@@ -86,60 +95,110 @@ function startTimer(){
 
 }
 
+function highscoreCheck() {
+  if (score != 0) {
+        highscore = localStorage.getItem("scoreText");
+        if(highscore !== null){
+            if (score > highscore) {
+                localStorage.setItem("scoreText", score);
+            }
+        }
+        else{
+            localStorage.setItem("scoreText", score);
+        }
+  }
+  $('#highscoreText').text("Highscore: "+highscore);
+}
+
 function timeOver() {
     if (timeleft==0) {
-      $(".game-over").show();
-      $(".playGame").hide();
-      // alert("Time is over!!!")
+      gameOver();
     } else {}
 }
 
 function checkLoss(){
   if (bug==3){
     // alert("Game Over");
-    $(".game-over").show();
-    $(".playGame").hide();
-    $("#score").text(score);
-
+    gameOver();
   } else{}
     // window.location.href = "victory.html"
 }
 
-function resetGame(){
-  var nextStep=0;
-  var bug=0;
-  var score=0;
-  var bonusPoints=0;
-  var timeleft=20;
+function clearLines(){
+  document.getElementById("step1").textContent="work";
+  for (var x=1; x<=prompt.length; x++){
+    if (document.getElementById("step"+x)!=null){
+      document.getElementById("step"+x).textContent="";
+    } else{}
+  }
 }
 
+function gameOver(){
+  $(".game-over").show();
+  $(".playGame").hide();
+  $("#finalScore").text(score);
+  showMisspelledWords();
+}
+
+function resetGame(){
+  clearInterval(pointTimer);
+  timeleft=20;
+  $("timeLimitText").text("20");
+  nextStep=0;
+  bug=0;
+  score=0;
+  bonusPoints=0;
+  clearLines();
+  misspelledWords=[];
+  $(".bugimg1").hide();
+  $(".bugimg2").hide();
+  $(".bugimg3").hide();
+  $('#promptText').text(prompt[nextStep]);
+  $('#instructionText').text(instruction[nextStep]);
+  $('#bugBoxText').text("Bugs: "+bug);
+  $('#scoreText').text("Score: "+score);
+}
+
+function showNextStep(){
+  document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
+}
+
+function showMisspelledWords(){
+  document.getElementById("misspelledList").textContent=misspelledWords;
+}
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
-  startTimer();
-  music.play();
-  $('#promptText').text(prompt[nextStep]);
 
+  $('#promptText').text(prompt[nextStep]);
+  $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
+    startTimer();
+    // music.play();
     event.preventDefault();
-    $('#instructionText').text(instruction[nextStep]);
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
 
 
   });
-  // listen to the the click
-  $("#tryAgain").click(function() {
-    $(".playGame").show();
-    $(".game-over").hide();
-    startTimer();
-    music.play();
-    $('#promptText').text(prompt[nextStep]);
-    $(".game").show();
-    $(".closeGame").hide();
-    $(".playGame").show();
 
+
+  $("#retryButton").click(function(){
+    resetGame();
+    $(".game-over").hide();
+    $(".playGame").show();
+    startTimer();
+  });
+
+  $("#mainMenu").click(function() {
+    window.location.href = "index.html";
+  });
+
+  // it will toggle the page, once user click the action button
+  $("#action").click(function() {
+    $("#personals").slideToggle();
+    $("#personals").css({display: "flex"});
   });
 
 });
