@@ -111,35 +111,50 @@ function clearHighScores(){
   }
 }
 
+//Object.keys(localStorage.getItem("highestScores")).length
+function tester(){
+  let output = [];
+  let max = loadedScores[0]
+  for(let i = 1; i < loadedScores.length; i ++){
+    let currentValue = loadedScores[i];
+
+    if(max.score < currentValue.score){
+      max = currentValue;
+    }
+  }
+  return max;
+}
 function leaderBoard(){
   //get stored scores
   //loadedScores.push(player1);
-  console.log(player1);
-  var added=false;
-  if (loadedScores.length==0||loadedScores===[]){
-    loadedScores.push(player1);
-    console.log("added player1 score to empty array : "+player1);
-  } else{
-    for(var x=0; x<loadedScores.length; x++){
-      //console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
-      if (player1.score>loadedScores[x]){
-        loadedScores.unshift(player1);
-        added=true;
-        console.log("added player1 score to front of array : "+player1);
-      } else{}
-    }
-    if (added==false){
-      loadedScores.push(player1);
-      console.log("pushed player 1 score to end of array : "+player1);
-    } else{}
-  }
-
-  for(var x=0; x<loadedScores.length; x++){
-    console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
-  }
-
-
+  // console.log(player1);
+  // var added=false;
+  // if (loadedScores.length==0||loadedScores===[]){
+  //   loadedScores.push(player1);
+  //   console.log(player1);
+  // } else{
+  //   for(var x=0; x<loadedScores.length; x++){
+  //     //console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
+  //     if (player1.score>loadedScores[x]){
+  //       loadedScores.unshift(player1);
+  //       added=true;
+  //       console.log(player1);
+  //     } else{}
+  //   }
+  //   if (added==false){
+  //     loadedScores.push(player1);
+  //     console.log(player1);
+  //   } else{}
+  // }
+  //
+  // for(var x=0; x<loadedScores.length; x++){
+  //   console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
+  // }
+  //
+  console.log(output);
+  loadedScores.push(player1);
   localStorage.setItem("highestScores", JSON.stringify(loadedScores));
+  console.log(loadedScores);
 }
 function timeOver() {
     if (timeleft==0&&bug!=3) {
