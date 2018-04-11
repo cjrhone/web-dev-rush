@@ -5,6 +5,9 @@ var bug=0;
 var score=0;
 var bonusPoints=0;
 var timeleft=20;
+var highestScores=[];
+var player;
+var loadedScores;
 var prompt =
 
 ["<!DOCTYPE html>","<html>","</html>","<head>","</head>","<title>","</title>","My Website","<body>","</body>","<h1>","</h1>","Animal Shelter","<div class='column'>","</div>","<img src='img/dog1.jpg'>","<h2>","</h2>","Ben the Dog","<p>","</p>","Happy even though nobody loves him.","<div class='column'>","</div>","<img src='img/dog2.jpg'>","<h2>","</h2>","Loretta the Dog","<p>","</p>","Always looks sad.","<div class='column'>","</div>","<img src='img/dog3.jpg'>","<h2>","</h2>","Billy the Dog","<p>","</p>","Loves the beach!","<br>","<div class='column'>","</div>","<img src='img/cat2.jpg'>","<h2>","</h2>","Greg the Cat","<p>","</p>","Never lost a staring contest","<div class='column'>","</div>","<img src='img/cat1.jpg'>","<h2>","</h2>","Tanya the Cat","<p>","</p>","Eats a lot, including her last owner.","<div class='column'>","</div>","<img src='img/cat3.jpg'>","<h2>","</h2>","Harry the Cat","<p>","</p>","Harry is a wild cat!"];
@@ -37,7 +40,7 @@ function runScript(e){
 
   if (e.keyCode==13){
     var userInput=$('#inputBox').val();
-    console.log(userInput);
+    //console.log(userInput);
     $('#inputBox').val("");
     testUserInput(userInput); //test input on enter press
     clearInterval(pointTimer);
@@ -95,23 +98,51 @@ function startTimer(){
 
 }
 
-function highscoreCheck() {
-  if (score != 0) {
-        highscore = localStorage.getItem("scoreText");
-        if(highscore !== null){
-            if (score > highscore) {
-                localStorage.setItem("scoreText", score);
-            }
-        }
-        else{
-            localStorage.setItem("scoreText", score);
-        }
-  }
-  $('#highscoreText').text("Highscore: "+highscore);
+function Player(name){
+  this.name=name;
+  this.score=0;
 }
 
+function clearHighScores(){
+  loadedScores=[];
+  localStorage.setItem("highestScores", JSON.stringify(loadedScores));
+  for(var x=0; x<loadedScores.length; x++){
+    console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
+  }
+}
+
+function leaderBoard(){
+  //get stored scores
+  //loadedScores.push(player1);
+  console.log(player1);
+  var added=false;
+  if (loadedScores.length==0||loadedScores===[]){
+    loadedScores.push(player1);
+    console.log("added player1 score to empty array : "+player1);
+  } else{
+    for(var x=0; x<loadedScores.length; x++){
+      //console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
+      if (player1.score>loadedScores[x]){
+        loadedScores.unshift(player1);
+        added=true;
+        console.log("added player1 score to front of array : "+player1);
+      } else{}
+    }
+    if (added==false){
+      loadedScores.push(player1);
+      console.log("pushed player 1 score to end of array : "+player1);
+    } else{}
+  }
+
+  for(var x=0; x<loadedScores.length; x++){
+    console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
+  }
+
+
+  localStorage.setItem("highestScores", JSON.stringify(loadedScores));
+}
 function timeOver() {
-    if (timeleft==0) {
+    if (timeleft==0&&bug!=3) {
       gameOver();
     } else {}
 }
@@ -134,10 +165,13 @@ function clearLines(){
 }
 
 function gameOver(){
+  //leaderBoard();
+  player1.score=score;
   $(".game-over").show();
   $(".playGame").hide();
   $("#finalScore").text(score);
   showMisspelledWords();
+  leaderBoard();
 }
 
 function resetGame(){
@@ -169,18 +203,24 @@ function showMisspelledWords(){
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
-
+  if (typeof(Storage) !== "undefined") {
+    console.log("Code for localStorage/sessionStorage.");
+    loadedScores= JSON.parse(localStorage.getItem("highestScores"));
+  } else {
+    console.log("Sorry! No Web Storage support..");
+  }
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
   $("#startGame").submit(function(event){
+    playerName=$("#usernameInput").val();
+    player1=new Player(playerName);
+    console.log(player1);
     startTimer();
     // music.play();
     event.preventDefault();
     $(".game").show();
     $(".closeGame").hide();
     $(".playGame").show();
-
-
   });
 
 
