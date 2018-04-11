@@ -100,7 +100,7 @@ h5 {
     margin-top: 35px;
     margin-bottom: 35px;
   }
-  
+
   #title {
     text-align: center;
   }
@@ -194,5 +194,9 @@ h5 {
 }
 
 .bugimg3{
+  display: none;
+}
+
+#pesonels {
   display: none;
 }

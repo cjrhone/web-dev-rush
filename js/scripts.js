@@ -195,4 +195,10 @@ $(document).ready(function() {
     window.location.href = "index.html";
   });
 
+  // it will toggle the page, once user click the action button
+  $("#action").click(function() {
+    $("#pesonels").slideToggle();
+    $("#pesonels").css({display: "flex"});
+  });
+
 });
