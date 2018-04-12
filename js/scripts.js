@@ -6,7 +6,7 @@ var score=0;
 var bonusPoints=0;
 var timeleft=20;
 var highestScores=[];
-var player;
+var player1;
 var loadedScores;
 var prompt =
 
@@ -112,9 +112,9 @@ function clearHighScores(){
 }
 
 //Object.keys(localStorage.getItem("highestScores")).length
-function tester(){
+function getMax(){
   let output = [];
-  let max = loadedScores[0]
+  let max = loadedScores[0];
   for(let i = 1; i < loadedScores.length; i ++){
     let currentValue = loadedScores[i];
 
@@ -124,6 +124,7 @@ function tester(){
   }
   return max;
 }
+
 function leaderBoard(){
   //get stored scores
   //loadedScores.push(player1);
@@ -131,28 +132,38 @@ function leaderBoard(){
   // var added=false;
   // if (loadedScores.length==0||loadedScores===[]){
   //   loadedScores.push(player1);
-  //   console.log(player1);
+  //   //console.log(player1);
   // } else{
   //   for(var x=0; x<loadedScores.length; x++){
   //     //console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
   //     if (player1.score>loadedScores[x]){
   //       loadedScores.unshift(player1);
   //       added=true;
-  //       console.log(player1);
+  //       //console.log(player1);
   //     } else{}
   //   }
   //   if (added==false){
   //     loadedScores.push(player1);
-  //     console.log(player1);
+  //     //console.log(player1);
   //   } else{}
   // }
-  //
-  // for(var x=0; x<loadedScores.length; x++){
+  loadedScores.push(player1);
+  var max=getMax();
+  // if (player1.score===max){
+  //   loadedScores.push(player1);
+  // }
+  // var x=0;
+  // if (loadedScores.length<1){
+  //   loadedScores.push(player1);
   //   console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
+  // }else{
+  //   for(x=0; x<loadedScores.length; x++){
+  //     console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
+  //   }
   // }
   //
-  console.log(output);
-  loadedScores.push(player1);
+  //console.log(output);
+  //loadedScores.push(player1);
   localStorage.setItem("highestScores", JSON.stringify(loadedScores));
   console.log(loadedScores);
 }
@@ -221,6 +232,9 @@ $(document).ready(function() {
   if (typeof(Storage) !== "undefined") {
     console.log("Code for localStorage/sessionStorage.");
     loadedScores= JSON.parse(localStorage.getItem("highestScores"));
+    if (loadedScores===null){
+      loadedScores=[];
+    }
   } else {
     console.log("Sorry! No Web Storage support..");
   }
