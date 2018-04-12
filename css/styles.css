@@ -82,6 +82,7 @@ h5 {
   display: none;
 }
 
+/*ROW 3*/
 #displayBox {
     background-color:  grey;
     background: rgba(192,192,192, 0.5);
@@ -116,7 +117,11 @@ h5 {
 
     #progress-box {
       height: 500px;
-      background-color: green;
+      background-image: url(../Assets/graphics/electric_progress.gif);
+      background-size:     cover;                      /* <------ */
+      background-repeat:   no-repeat;
+      background-position: center center;
+      mix-blend-mode: screen;
       margin-top: 40px;
       border-radius: 50px;
       margin-left: 30px;
@@ -139,12 +144,14 @@ h5 {
 
 /*ROW 1*/
   #prompts {
-    padding: 25px;
+    padding: 45px;
     color: white;
     font-size: 40px;
     text-align: center;
-    margin-left: 50px;
-    margin-top: 60px;
+    margin-left: 30px;
+    width:auto;
+    height: 20px;
+    /*padding-top: 90px;*/
     /*margin: 5px;*/
     /*border-radius: 50px;*/
   }
@@ -152,12 +159,10 @@ h5 {
   #timeLimit {
     width: 100%;
     height: 60px;
-    background-color: grey;
+    background-color: blue;
     border: 2px solid black;
-    text-align: center;
+
     border-radius: 50px;
-    margin-top: 60px;
-    margin: 5px;
     font-size: 25px;
     font-weight: bold;
     border-radius: 50px;
@@ -166,12 +171,10 @@ h5 {
   #scoreBox {
     width: 100%;
     height: 60px;
-    background-color: grey;
+    background-color: orange;
     border: 2px solid black;
     text-align: center;
     border-radius: 50px;
-    margin-top: 60px;
-    margin: 5px;
     font-size: 25px;
     font-weight: bold;
     border-radius: 50px;
@@ -197,45 +200,38 @@ h5 {
 
   #inputBox {
     height: 60px;
-    width: 100%;
-    background-image: url(https://media.giphy.com/media/dnoyd6rMvw29q/giphy.gif);
+    width: 70%;
+    background-color: black;
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
     mix-blend-mode: screen;
     color:white;
     border-radius: 50px;
+    margin-left: 125px;
     margin-top: 40px;
   }
 
-  #prompts {
-    padding: 25px;
-    background-color: grey;
-    border: 2px solid black;
-    text-align: center;
-    margin: 5px;
-    border-radius: 50px;
-  }
 
 
   #instructions {
     padding: 25px;
-    background-color: grey;
-    border: 2px solid black;
-    text-align: center;
-    margin: 5px;
-    border-radius: 50px;
+    background-color: lightgrey;
+    text-align: left;
+    font-size: 20px;
+
+
   }
 
   #bugBox {
-    height: 60px;
+    height: 50px;
     width: 80%;
     text-align: center;
     margin: 5px;
     font-size: 25px;
     font-weight: bold;
     border-radius: 50px;
-    margin-top: 40px;
+
 
   }
 
