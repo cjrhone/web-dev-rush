@@ -4,7 +4,7 @@ var nextStep=0;
 var bug=0;
 var score=0;
 var bonusPoints=0;
-var timeleft=20;
+var timeleft=15;
 var prompt =
 
 
@@ -16,11 +16,11 @@ var instruction =
 
 //Sounds and SFX
 var correctSound = new Howl({
-  src: ['Assets/SFX/correct1.mp3']
+  src: ['Assets/SFX/laser2.mp3']
 });
 
 var wrongSound = new Howl({
-  src: ['Assets/SFX/wrong1.mp3']
+  src: ['Assets/SFX/bug.wav']
 });
 
 var music = new Howl({
@@ -110,7 +110,7 @@ function highscoreCheck() {
 }
 
 function timeOver() {
-    if (timeleft==0) {
+    if (timeleft<=0) {
       gameOver();
     } else {}
 }
@@ -142,8 +142,8 @@ function gameOver(){
 
 function resetGame(){
   clearInterval(pointTimer);
-  timeleft=20;
-  $("timeLimitText").text("20");
+  timeleft=15;
+  $("timeLimitText").text("15");
   nextStep=0;
   bug=0;
   score=0;
@@ -159,8 +159,15 @@ function resetGame(){
   $('#scoreText').text("Score: "+score);
 }
 
+function progressBar() {
+    var elem = document.getElementById("myBar");
+    var height = (nextStep/69)*100;
+    elem.style.height = height + '%';
+}
+
 function showNextStep(){
   document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
+  progressBar();
 }
 function stepClass(){
   textContent.addClass('animated fadeIn');

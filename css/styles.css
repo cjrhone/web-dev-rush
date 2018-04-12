@@ -86,13 +86,13 @@ h5 {
     height: 500px;
     text-align: center;
     border: 2px solid black;
-    border-radius:50px;
+
     /* padding-top: 100px; */
     font-size: 100px;
     margin-right:10px;
     margin-top: 40px;
     overflow-y: auto;
-    border-radius: 50px;
+
   }
 
   #PreviewBox {
@@ -111,10 +111,10 @@ h5 {
       border-radius: 50px;
     }
 
-    #progress-box {
+    /*#progress-box {
       height: 500px;
       background-image: url(../Assets/graphics/electric_progress.gif);
-      background-size:     cover;                      /* <------ */
+      background-size:     cover;
       background-repeat:   no-repeat;
       background-position: center center;
       mix-blend-mode: screen;
@@ -122,7 +122,28 @@ h5 {
       border-radius: 50px;
       margin-left: 30px;
 
+    }*/
+
+    #myProgress {
+    width: 98%;
+    height: 500px;
+    background-color: grey;
+    margin-top: 40px;
     }
+
+    #myBar {
+    width: 66%;
+    background-image: url(../Assets/graphics/electric_progress.gif);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    mix-blend-mode: screen;
+    line-height: 30px; /* To center it vertically */
+    background-position:bottom;
+    position: absolute;
+    bottom: 0;
+    height: 0%;
+}
 
   #usernameInput {
     text-align: center;
@@ -142,10 +163,10 @@ h5 {
   #prompts {
     padding: 45px;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-left: 30px;
-    width:auto;
+    width:500px;
     height: 20px;
     /*padding-top: 90px;*/
     /*margin: 5px;*/
@@ -155,7 +176,7 @@ h5 {
   #timeLimit {
     width: 100%;
     height: 60px;
-    background-color: blue;
+    background-color: lightblue;
     border: 2px solid black;
 
     border-radius: 50px;
@@ -220,6 +241,7 @@ h5 {
   }
 
   #bugBox {
+    color: red;
     height: 50px;
     width: 80%;
     text-align: center;
@@ -264,8 +286,7 @@ h5 {
 
 
 .jumbotron {
-  background-image: url("http://cdn.blog.psafe.com/en/blog/wp-content/uploads/2016/10/BLOG_EN_0510_Most-Useful-Coding-and-Programming-Languages-to-Know.jpg");
-
+   background-image: url("http://cdn.blog.psafe.com/en/blog/wp-content/uploads/2016/10/BLOG_EN_0510_Most-Useful-Coding-and-Programming-Languages-to-Know.jpg");
 }
 .title {
   color: white;
@@ -292,7 +313,15 @@ h3#instruction {
 
 img#instruction {
   max-width:  100%;
+  border: 10px solid black;
 }
+
+#PreviewBox img {
+  width: 400px;
+  height: auto;
+  margin-bottom: 200px;
+}
+
 =======
 
 .canvas {
@@ -304,6 +333,11 @@ img#instruction {
   margin-top: 50px;
   margin-bottom: 50px;
   padding-top: 25px;
+}
+
+.teamphoto {
+  width: 600px;
+  height: auto;
 }
 
 
