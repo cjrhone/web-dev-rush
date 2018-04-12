@@ -114,18 +114,61 @@ function clearHighScores(){
 //Object.keys(localStorage.getItem("highestScores")).length
 function getMax(){
   let output = [];
-  let max = loadedScores[0];
-  for(let i = 1; i < loadedScores.length; i ++){
-    let currentValue = loadedScores[i];
+  var added=false;
+  //let max = loadedScores[0];
 
-    if(max.score < currentValue.score){
-      max = currentValue;
-    }
+  if (player1.score>loadedScores[0].score){
+    loadedScores.splice(0, 0, player1);
+    console.log("added top score");
+    added=true;
   }
-  return max;
+  if (added===false){
+    for(let i = 1; i < loadedScores.length&&added===false; i ++){
+      //let currentValue = loadedScores[i];
+      console.log("for loop i: "+i);
+      var nextItem;
+      if (loadedScores[i+1]===undefined) {
+        nextItem=0;
+      } else {
+        nextItem=loadedScores[i+1].score;
+      }
+      if (player1.score<loadedScores[i].score&&player1.score>nextItem){
+        loadedScores.splice(i, 0, player1);
+        console.log("max found and splice happens");
+        added=true;
+      } else if (player1.score<loadedScores[loadedScores.length-1].score){
+        // loadedScores.splice(i, 0, player1);
+        loadedScores.push(player1);
+        console.log("max found and splice happens condition 2");
+        added=true;
+      }else{}
+    }
+    if (added===false){
+      console.log("added to the end");
+      loadedScores.push(player1);
+      added=true;
+    } else{}
+  }
+    // if(max.score < currentValue.score){
+    //   max = currentValue;
+    // }
+
+  //return max;
 }
 
 function leaderBoard(){
+  if (loadedScores.length<1){
+    loadedScores.push(player1);
+    console.log("added first value");
+    console.log(1+". " + loadedScores[0].name + " score: "+ loadedScores[0].score);
+  } else{
+    getMax();
+    for(x=0; x<loadedScores.length; x++){
+        console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
+      }
+  }
+
+
   //get stored scores
   //loadedScores.push(player1);
   // console.log(player1);
@@ -147,8 +190,8 @@ function leaderBoard(){
   //     //console.log(player1);
   //   } else{}
   // }
-  loadedScores.push(player1);
-  var max=getMax();
+  // loadedScores.push(player1);
+  // var max=getMax();
   // if (player1.score===max){
   //   loadedScores.push(player1);
   // }
