@@ -193,6 +193,7 @@ function gameOver(){
   $("#retryButton").addClass('animated bounceInDown');
   showMisspelledWords();
   leaderBoard();
+  showHighScores();
 }
 
 function resetGame(){
@@ -227,6 +228,15 @@ function showNextStep(){
 }
 function stepClass(){
   textContent.addClass('animated fadeIn');
+}
+
+function showHighScores(){
+  document.getElementById("highScoreList").textContent="";
+  loadedScores.forEach(function(loadedScore){
+    console.log("display loop runs");
+    $("#highScoreList").append("<li class='noFloat'>" +loadedScore.name+" "+loadedScore.score);
+  });
+  $("#highScoreList").append("</li>");
 }
 
 

@@ -344,6 +344,17 @@ img#instruction {
   height: auto;
 }
 
+ol {
+margin: 0;
+padding: 0;
+overflow: hidden;
+color: white;
+}
+
+.noFloat{
+  float:none;
+}
+
 
 
 /*changes for canvas*/
