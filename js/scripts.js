@@ -4,7 +4,7 @@ var nextStep=0;
 var bug=0;
 var score=0;
 var bonusPoints=0;
-var timeleft=15;
+var timeleft=20;
 var highestScores=[];
 var player1;
 var loadedScores;
@@ -257,8 +257,8 @@ function gameOver(){
 function resetGame(){
   player1=new Player(playerName);
   clearInterval(pointTimer);
-  timeleft=15;
-  $("timeLimitText").text("15");
+  timeleft=20;
+  $("timeLimitText").text("20");
   nextStep=0;
   showNextImage();
   bug=0;
@@ -337,16 +337,16 @@ $(document).ready(function() {
     select.play();
     $(".instructions").hide();
     startTimer();
-    $('#bugBox').addClass('animated rollIn');
-    $('#displayBox').addClass('animated rollIn');
-    $("#timeLimit").addClass('animated rollIn');
-    $("#scoreBox").addClass('animated rollIn');
-    $('#instructions').addClass('animated rollIn');
-    $('#inputBox').addClass('animated rollIn');
-    $("#progress-box").addClass('animated rollIn');
-    $("#prompts").addClass('animated rollIn');
-    $("#timeLimitText").addClass('animated rollIn');
-    $("#PreviewBox").addClass('animated rollIn');
+    $('#bugBox').addClass('animated flipInX');
+    $('#displayBox').addClass('animated flipInX');
+    $("#timeLimit").addClass('animated flipInX');
+    $("#scoreBox").addClass('animated flipInX');
+    $('#instructions').addClass('animated flipInX');
+    $('#inputBox').addClass('animated flipInX');
+    $("#progress-box").addClass('animated flipInX');
+    $("#prompts").addClass('animated flipInX');
+    $("#timeLimitText").addClass('animated flipInX');
+    $("#PreviewBox").addClass('animated flipInX');
     // music.play();
 
 
