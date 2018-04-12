@@ -96,7 +96,7 @@ h5 {
     margin-right:10px;
     margin-top: 40px;
     overflow-y: auto;
-    
+
   }
 
   #PreviewBox {
@@ -115,10 +115,10 @@ h5 {
       border-radius: 50px;
     }
 
-    #progress-box {
+    /*#progress-box {
       height: 500px;
       background-image: url(../Assets/graphics/electric_progress.gif);
-      background-size:     cover;                      /* <------ */
+      background-size:     cover;
       background-repeat:   no-repeat;
       background-position: center center;
       mix-blend-mode: screen;
@@ -126,7 +126,28 @@ h5 {
       border-radius: 50px;
       margin-left: 30px;
 
+    }*/
+
+    #myProgress {
+    width: 98%;
+    height: 500px;
+    background-color: grey;
+    margin-top: 40px;
     }
+
+    #myBar {
+    width: 66%;
+    background-image: url(../Assets/graphics/electric_progress.gif);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    mix-blend-mode: screen;
+    line-height: 30px; /* To center it vertically */
+    background-position:bottom;
+    position: absolute;
+    bottom: 0;
+    height: 0%;
+}
 
   #usernameInput {
     text-align: center;
@@ -146,7 +167,7 @@ h5 {
   #prompts {
     padding: 45px;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-left: 30px;
     width:500px;

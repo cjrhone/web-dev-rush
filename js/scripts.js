@@ -15,11 +15,11 @@ var instruction =
 
 //Sounds and SFX
 var correctSound = new Howl({
-  src: ['Assets/SFX/correct1.mp3']
+  src: ['Assets/SFX/laser2.mp3']
 });
 
 var wrongSound = new Howl({
-  src: ['Assets/SFX/wrong1.mp3']
+  src: ['Assets/SFX/bug.wav']
 });
 
 var music = new Howl({
@@ -159,8 +159,15 @@ function resetGame(){
   $('#scoreText').text("Score: "+score);
 }
 
+function progressBar() {
+    var elem = document.getElementById("myBar");
+    var height = (nextStep/69)*100;
+    elem.style.height = height + '%';
+}
+
 function showNextStep(){
   document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
+  progressBar();
 }
 
 function showMisspelledWords(){
