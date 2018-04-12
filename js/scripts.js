@@ -193,7 +193,7 @@ $(document).ready(function() {
     $('#instructions').addClass('animated rollIn');
     $('#inputBox').addClass('animated rollIn');
     $("#progress-box").addClass('animated rollIn');
-    $("#prompts").addClass('animated rollIn');
+    $("#prompts").addClass('animated infinite pulse');
     $("#timeLimitText").addClass('animated rollIn');
     $("#PreviewBox").addClass('animated rollIn');
     $("#myProgress").addClass('animated rollIn');
