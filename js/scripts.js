@@ -60,9 +60,9 @@ function testUserInput(userInput){
     nextStep++;
     correctSound.play();
     score=score+bonusPoints;
-    timeleft=timeleft+10;
+    timeleft=timeleft+5;
     $('#correctTimeBonus').show();
-    $('#correctTimeBonus').text("+10 seconds");
+    $('#correctTimeBonus').text("+5 seconds");
     $('#correctTimeBonus').fadeOut(800);
   } else{
     misspelledWords.push(prompt[nextStep]);

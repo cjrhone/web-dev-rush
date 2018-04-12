@@ -1,5 +1,6 @@
 h6{
   text-align:left;
+  color: white;
 }
 
 ul {
@@ -316,7 +317,7 @@ h3#instruction {
 }
 
 img#instruction {
-  max-width:  100%;
+  max-width:  75%;
   border: 10px solid black;
 }
 
