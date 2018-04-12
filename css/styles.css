@@ -142,7 +142,7 @@ h5 {
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
-    mix-blend-mode: screen;
+    /*mix-blend-mode: screen;*/
     line-height: 30px; /* To center it vertically */
     background-position:bottom;
     position: absolute;
