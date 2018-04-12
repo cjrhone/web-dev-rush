@@ -224,6 +224,7 @@ h5 {
   }
 
   #bugBox {
+    color: red;
     height: 50px;
     width: 80%;
     text-align: center;
