@@ -28,7 +28,16 @@ var music = new Howl({
 
 var type = new Howl({
   src:['Assets/SFX/keyboard_key.mp3']
-})
+});
+
+var lose = new Howl({
+  src:['Assets/SFX/website-change.wav']
+
+});
+
+var select = new Howl({
+  src:['Assets/SFX/select.mp3']
+});
 
 
 //add listener to get textbox input when a user presses enter
@@ -113,6 +122,7 @@ function highscoreCheck() {
 function timeOver() {
     if (timeleft<=0) {
       gameOver();
+
     } else {}
 }
 
@@ -134,6 +144,7 @@ function clearLines(){
 }
 
 function gameOver(){
+  lose.play();
   $(".game-over").show();
   $(".playGame").hide();
   $("#finalScore").text(score);
@@ -166,6 +177,7 @@ function progressBar() {
 }
 
 function showNextStep(){
+  select.play();
   document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
   progressBar();
 }
@@ -181,6 +193,7 @@ $(document).ready(function() {
   $('#instructionText').text(instruction[nextStep]);
 
   $("#startGame").submit(function(event){
+    select.play();
     event.preventDefault();
     $(".instructions").show();
     $(".closeGame").hide();
@@ -190,6 +203,7 @@ $(document).ready(function() {
   });
 
   $("#continue").click(function() {
+    select.play();
     $(".instructions").hide();
     startTimer();
     // music.play();
@@ -201,6 +215,7 @@ $(document).ready(function() {
 
 
   $("#retryButton").click(function(){
+    select.play();
     resetGame();
     $(".game-over").hide();
     $(".playGame").show();
@@ -208,11 +223,13 @@ $(document).ready(function() {
   });
 
   $("#mainMenu").click(function() {
+    select.play();
     window.location.href = "index.html";
   });
 
   // it will toggle the page, once user click the action button
   $("#action").click(function() {
+    select.play();
     $("#personals").slideToggle();
     $("#personals").css({display: "flex"});
   });
