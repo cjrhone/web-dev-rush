@@ -113,7 +113,7 @@ function clearHighScores(){
 function getMax(){
   let output=[];
   var added=false;
-  var nextItem=0;
+//var nextItem=0;
   if (player1.score>loadedScores[0].score){
     loadedScores.splice(0, 0, player1);
     console.log ("added top score");
@@ -122,7 +122,7 @@ function getMax(){
   if (added===false){
     for(let i=0; i<loadedScores.length&&added===false; i++){
       console.log("for loop i: "+i);
-      var nextItem;
+      let nextItem;
       if (loadedScores[i+1]===undefined){
         nextItem=undefined;
       } else{
@@ -130,7 +130,7 @@ function getMax(){
       }
 
       if (player1.score<loadedScores[0].score&&player1.score>nextItem){
-        loadedScores.splice(i,0, player1);
+        loadedScores.splice(i+1,0, player1);
         console.log("max found and splice happens");
         added=true;
         console.log("next item:" +nextItem);
