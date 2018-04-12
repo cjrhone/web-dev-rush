@@ -198,10 +198,10 @@ function clearLines(){
 function gameOver(){
   lose.play();
   player1.score=score;
-  $(".game-over").show();
+  $(".game-over").show().addClass('animated bounceInDown');
   $(".playGame").hide();
   $("#finalScore").text(score);
-  $("#retryButton").addClass('animated bounceInDown');
+  $("#retryButton");
   showMisspelledWords();
   leaderBoard();
   showHighScores();
@@ -299,6 +299,8 @@ $(document).ready(function() {
     $("#timeLimitText").addClass('animated rollIn');
     $("#PreviewBox").addClass('animated rollIn');
     // music.play();
+
+
 
     $(".game").show();
     $(".closeGame").hide();
