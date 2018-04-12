@@ -61,9 +61,9 @@ function testUserInput(userInput){
     nextStep++;
     correctSound.play();
     score=score+bonusPoints;
-    timeleft=timeleft+5;
+    timeleft=timeleft+3;
     $('#correctTimeBonus').show();
-    $('#correctTimeBonus').text("+5 seconds");
+    $('#correctTimeBonus').text("+3 seconds");
     $('#correctTimeBonus').fadeOut(800);
   } else{
     misspelledWords.push(prompt[nextStep]);
@@ -156,6 +156,53 @@ function getMax(){
   }
 }
 
+function showNextImage(){
+  var image =  document.getElementById("previewImage");
+  if (nextStep===0){
+    image.src = "img/website-pictures/img1.png";
+  } else if (nextStep===8){
+    image.src = "img/website-pictures/img2.png";
+  } else if (nextStep===13){
+    image.src = "img/website-pictures/img21.png";
+  } else if (nextStep===16){
+    image.src = "img/website-pictures/img3.png";
+  } else if (nextStep===19){
+    image.src = "img/website-pictures/img4.png";
+  } else if (nextStep===22){
+    image.src = "img/website-pictures/img5.png";
+  } else if (nextStep===25){
+    image.src = "img/website-pictures/img6.png";
+  } else if (nextStep===28){
+    image.src = "img/website-pictures/img7.png";
+  } else if (nextStep===31){
+    image.src = "img/website-pictures/img8.png";
+  } else if (nextStep===34){
+    image.src = "img/website-pictures/img9.png";
+  } else if (nextStep===37){
+    image.src = "img/website-pictures/img10.png";
+  } else if (nextStep===40){
+    image.src = "img/website-pictures/img11.png";
+  } else if (nextStep===44){
+    image.src = "img/website-pictures/img12.png";
+  } else if (nextStep===47){
+    image.src = "img/website-pictures/img13.png";
+  } else if (nextStep===50){
+    image.src = "img/website-pictures/img14.png";
+  } else if (nextStep===53){
+    image.src = "img/website-pictures/img15.png";
+  } else if (nextStep===56){
+    image.src = "img/website-pictures/img16.png";
+  } else if (nextStep===59){
+    image.src = "img/website-pictures/img17.png";
+  } else if (nextStep===62){
+    image.src = "img/website-pictures/img18.png";
+  } else if (nextStep===65){
+    image.src = "img/website-pictures/img19.png";
+  } else if (nextStep===69){
+    image.src = "img/website-pictures/img20.png";
+  }
+}
+
 function leaderBoard(){
   if (loadedScores.length<1){
     loadedScores.push(player1);
@@ -213,6 +260,7 @@ function resetGame(){
   timeleft=15;
   $("timeLimitText").text("15");
   nextStep=0;
+  showNextImage();
   bug=0;
   score=0;
   bonusPoints=0;
@@ -237,6 +285,7 @@ function showNextStep(){
   select.play();
   document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
   progressBar();
+  showNextImage();
 }
 function stepClass(){
   textContent.addClass('animated fadeIn');
