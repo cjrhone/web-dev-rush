@@ -124,7 +124,6 @@ function getMax(){
   }
   if (added===false){
     for(let i = 1; i < loadedScores.length&&added===false; i ++){
-      //let currentValue = loadedScores[i];
       console.log("for loop i: "+i);
       var nextItem;
       if (loadedScores[i+1]===undefined) {
@@ -137,7 +136,6 @@ function getMax(){
         console.log("max found and splice happens");
         added=true;
       } else if (player1.score<loadedScores[loadedScores.length-1].score){
-        // loadedScores.splice(i, 0, player1);
         loadedScores.push(player1);
         console.log("max found and splice happens condition 2");
         added=true;
@@ -149,11 +147,6 @@ function getMax(){
       added=true;
     } else{}
   }
-    // if(max.score < currentValue.score){
-    //   max = currentValue;
-    // }
-
-  //return max;
 }
 
 function leaderBoard(){
@@ -244,6 +237,7 @@ function gameOver(){
 }
 
 function resetGame(){
+  player1=new Player(playerName);
   clearInterval(pointTimer);
   timeleft=20;
   $("timeLimitText").text("20");
