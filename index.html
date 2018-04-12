@@ -25,21 +25,21 @@
       <form id ="startGame">
         <div class="container">
           <div class="instructions">
-            <h1>Instructions</h1>
-            <h3 id="instruction">About This Game:</h3>
+            <h1 class="animated zoomIn">Instructions</h1>
+            <h3 id="instruction" class="animated zoomIn">About This Game:</h3>
 
-            <p id="instruction">How to play this game </p>
-              <p id="instruction">Your objective is to type html code as quickly and as accurately as possible. 3 bugs
+            <p id="instruction" class="animated zoomIn">How to play this game </p>
+              <p id="instruction" class="animated zoomIn">Your objective is to type html code as quickly and as accurately as possible. 3 bugs
               (mistypes) and the game is over. Please Follow the prompts:</p>
-              <img src="img/frontEnd.png" alt="frontend" id="instruction">
+              <p class="animated zoomIn"><img src="img/frontEnd.png" alt="frontend" id="instruction"></p>
               <ol>
                 <li></li>
               </ol>
             <button type="button" class="btn btn-lg btn-success" name="button" id="continue">Continue</button>
           </div>
           <div class="closeGame">
-
-            <h1><img src="img/webdev.png"></h1>
+            
+            <h1 class="animated zoomIn"><img src="img/webdev.png"></h1>
             <input id="usernameInput" class="form-control" type="text" placeholder="Enter your name"></input>
             <button type="submit" class="btn btn-success">Start</button>
           </div>
@@ -55,6 +55,57 @@
           <div class="row">
             <div class="col-md-12">
               <div class="well" id="instructions"><span id="instructionText"></span>
+        <h1 align="center"><span id="title"><img src="img/webdev.png"><span></h1>
+          
+
+
+
+
+          <div class="row">
+
+            <div class="col-md-8">
+              <div class="well" id="displayBox">
+               <p class="animated fadeInDownBig"><h6 class="displayLines" id="step1"></h6>
+                <h6 class="displayLines" id="step2"></h6>
+                <h6 class="displayLines" id="step4"></h6>
+                <h6 class="displayLines" id="line4"></h6>
+                <h6 class="displayLines" id="line5"><span id=step6></span><span id=step8></span><span id=step7></span></h6>
+                <h6 class="displayLines" id="step5"></h6>
+                <h6 class="displayLines" id="step9"></h6>
+                <h6 class="displayLines" id="line8"><span id=step11></span><span id=step13></span><span id=step12></span></h6>
+                <h6 class="displayLines" id="step14"></h6>
+                <h6 class="displayLines" id="step16"></h6>
+                <h6 class="displayLines" id="line11"><span id=step17></span><span id=step19></span><span id=step18></span></h6>
+                <h6 class="displayLines" id="line12"><span id=step20></span><span id=step22><span id=step21></span></h6>
+                <h6 class="displayLines" id="step15"></h6>
+                <h6 class="displayLines" id="step23"></h6>
+                <h6 class="displayLines" id="step25"></h6>
+                <h6 class="displayLines" id="line16"><span id=step26></span><span id=step28></span><span id=step27></span></h6>
+                <h6 class="displayLines" id="line17"><span id=step29></span><span id=step31></span><span id=step30></span></h6>
+                <h6 class="displayLines" id="step24"></h6>
+                <h6 class="displayLines" id="step32"></h6>
+                <h6 class="displayLines" id="step34"></h6>
+                <h6 class="displayLines" id="line21"><span id=step35></span><span id=step37></span><span id=step36></span></h6>
+                <h6 class="displayLines" id="line22"><span id=step38></span><span id=step40></span><span id=step39></span></h6>
+                <h6 class="displayLines" id="step33"></h6>
+                <h6 class="displayLines" id="step41"></h6>
+                <h6 class="displayLines" id="step42"></h6>
+                <h6 class="displayLines" id="step44"></h6>
+                <h6 class="displayLines" id="line27"><span id=step45></span><span id=step47></span><span id=step46></span></h6>
+                <h6 class="displayLines" id="line28"><span id=step48></span><span id=step50></span><span id=step49></span></h6>
+                <h6 class="displayLines" id="step43"></h6>
+                <h6 class="displayLines" id="step51"></h6>
+                <h6 class="displayLines" id="step53"></h6>
+                <h6 class="displayLines" id="line32"><span id=step54></span><span id=step56></span><span id=step55></span></h6>
+                <h6 class="displayLines" id="line33"><span id=step57></span><span id=step59></span><span id=step58></span></h6>
+                <h6 class="displayLines" id="step52"></h6>
+                <h6 class="displayLines" id="step60"></h6>
+                <h6 class="displayLines" id="step62"></h6>
+                <h6 class="displayLines" id="line37"><span id=step63></span><span id=step65></span><span id=step64></span></h6>
+                <h6 class="displayLines" id="line38"><span id=step67></span><span id=step69></span><span id=step68></span></h6>
+                <h6 class="displayLines" id="step61"></h6>
+                <h6 class="displayLines" id="step10"></h6>
+                <h6 class="displayLines" id="step3"></h6></p>
               </div>
             </div>
           </div>
@@ -68,13 +119,13 @@
                   <br><br>
                   <div class="well" id="scoreBox"><span id="scoreText">Score: 0</span></div>
                 </div>
-
+                
                 <div class="col-md-3">
                   <br><br>
                   <div class="well" id="timeLimit">Time: <span id="timeLimitText"></span> <span id="correctTimeBonus"></span><span id="incorrectTimeBonus"></span></div>
                 </div>
               </div>
-
+              
               <div class="row">
                 <div class="col-md-6">
 
@@ -82,7 +133,7 @@
                 </div>
 
                 <div class="col-md-6">
-
+      
                     <div class="well" id="bugBox"><span id="bugBoxText">Bugs: 0</span>
                       <span class="bugimg1"><img src="Assets/graphics/bug1.png"></span><span class="bugimg2"><img src="Assets/graphics/bug1.png"></span>
                         <span class="bugimg3"><img src="Assets/graphics/bug1.png"></span>
@@ -142,6 +193,7 @@
                       <h6 class="displayLines" id="step61"></h6>
                       <h6 class="displayLines" id="step10"></h6>
                       <h6 class="displayLines" id="step3"></h6>
+                      
                     </div>
                 </div>
 
@@ -157,18 +209,14 @@
 
       </div>
     </div>
-
-        <!-- canvas -->
-
-
-
+    
           <!-- Game Over -->
           <div class="game-over">
             <div class="container">
               <!-- <div id="victoryimg"> -->
-              <img src="img/gameover.gif">
+              <p class="animated bounceInDown"><img src="img/gameover.gif"></p>
 
-              <h1>Final Score: <span id="finalScore"></span></h1>
+              <h1 class="animated bounceInDown">Final Score: <span id="finalScore"></span></h1>
               <!-- <h1>Highest Score: <span id="highestScore"></span></h1> -->
               </div>
               <div class="row">
@@ -176,16 +224,16 @@
                   <button id="retryButton" type="button" class="btn btn-success">Retry</button>
                 </div>
                 <div class="col-md-6">
-                    <button type="submit" class="btn btn-primary" id="mainMenu">Menu</button>
+                    <p class="animated bounceInDown"><button type="submit" class="btn btn-primary" id="mainMenu">Menu</button></p>
                 </div>
 
               </div>
 
-              <h1>Misspelled words: <span id="misspelledList"></span></h1>
+              <h1 class="animated bounceInDown">Misspelled words: <span id="misspelledList"></span></h1>
             </div>
             <!-- Game Over -->
 
-    \
+    
 
     <!-- Footer -->
     <footer class="footer">
