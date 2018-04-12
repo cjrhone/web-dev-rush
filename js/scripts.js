@@ -7,6 +7,7 @@ var bonusPoints=0;
 var timeleft=20;
 var prompt =
 
+
 ["<!DOCTYPE html>","<html>","</html>","<head>","</head>","<title>","</title>","My Website","<body>","</body>","<h1>","</h1>","Animal Shelter","<div class='column'>","</div>","<img src='img/dog1.jpg'>","<h2>","</h2>","Ben the Dog","<p>","</p>","Happy even though nobody loves him.","<div class='column'>","</div>","<img src='img/dog2.jpg'>","<h2>","</h2>","Loretta the Dog","<p>","</p>","Always looks sad.","<div class='column'>","</div>","<img src='img/dog3.jpg'>","<h2>","</h2>","Billy the Dog","<p>","</p>","Loves the beach!","<br>","<div class='column'>","</div>","<img src='img/cat2.jpg'>","<h2>","</h2>","Greg the Cat","<p>","</p>","Never lost a staring contest","<div class='column'>","</div>","<img src='img/cat1.jpg'>","<h2>","</h2>","Tanya the Cat","<p>","</p>","Eats a lot, including her last owner.","<div class='column'>","</div>","<img src='img/cat3.jpg'>","<h2>","</h2>","Harry the Cat","<p>","</p>","Harry is a wild cat!"];
 
 var instruction =
@@ -30,11 +31,9 @@ var type = new Howl({
   src:['Assets/SFX/keyboard_key.mp3']
 })
 
-
 //add listener to get textbox input when a user presses enter
 function runScript(e){
   type.play();
-
   if (e.keyCode==13){
     var userInput=$('#inputBox').val();
     console.log(userInput);
@@ -68,6 +67,7 @@ function testUserInput(userInput){
   }
   if(bug ===1){
     $(".bugimg1").show();
+
   }
   if(bug ===2){
     $(".bugimg2").show();
@@ -79,7 +79,6 @@ function testUserInput(userInput){
   $('#instructionText').text(instruction[nextStep]);
   $('#bugBoxText').text("Bugs: "+bug);
   $('#scoreText').text("Score: "+score);
-
   showNextStep();
 }
 
@@ -137,6 +136,7 @@ function gameOver(){
   $(".game-over").show();
   $(".playGame").hide();
   $("#finalScore").text(score);
+  $("#retryButton").addClass('animated bounceInDown');
   showMisspelledWords();
 }
 
@@ -162,6 +162,10 @@ function resetGame(){
 function showNextStep(){
   document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
 }
+function stepClass(){
+  textContent.addClass('animated fadeIn');
+}
+
 
 function showMisspelledWords(){
   document.getElementById("misspelledList").textContent=misspelledWords;
@@ -169,7 +173,7 @@ function showMisspelledWords(){
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
-
+  
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
 
@@ -179,12 +183,21 @@ $(document).ready(function() {
     $(".closeGame").hide();
 
 
-
   });
 
   $("#continue").click(function() {
     $(".instructions").hide();
     startTimer();
+    $('#bugBox').addClass('animated rollIn');
+    $('#displayBox').addClass('animated rollIn');
+    $("#timeLimit").addClass('animated rollIn');
+    $("#scoreBox").addClass('animated rollIn');
+    $('#instructions').addClass('animated rollIn');
+    $('#inputBox').addClass('animated rollIn');
+    $("#progress-box").addClass('animated rollIn');
+    $("#prompts").addClass('animated rollIn');
+    $("#timeLimitText").addClass('animated rollIn');
+    $("#PreviewBox").addClass('animated rollIn');
     // music.play();
 
     $(".game").show();
