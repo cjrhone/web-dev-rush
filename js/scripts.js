@@ -111,7 +111,7 @@ function highscoreCheck() {
 }
 
 function timeOver() {
-    if (timeleft==0) {
+    if (timeleft<=0) {
       gameOver();
     } else {}
 }
@@ -142,8 +142,8 @@ function gameOver(){
 
 function resetGame(){
   clearInterval(pointTimer);
-  timeleft=20;
-  $("timeLimitText").text("20");
+  timeleft=15;
+  $("timeLimitText").text("15");
   nextStep=0;
   bug=0;
   score=0;

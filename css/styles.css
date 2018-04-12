@@ -149,7 +149,7 @@ h5 {
     font-size: 40px;
     text-align: center;
     margin-left: 30px;
-    width:auto;
+    width:500px;
     height: 20px;
     /*padding-top: 90px;*/
     /*margin: 5px;*/
@@ -296,6 +296,7 @@ h3#instruction {
 
 img#instruction {
   max-width:  100%;
+  border: 10px solid black;
 }
 =======
 
