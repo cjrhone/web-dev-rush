@@ -200,14 +200,15 @@ h5 {
 
   #inputBox {
     height: 60px;
-    width: 100%;
-    background-color: silver;
+    width: 70%;
+    background-color: black;
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;
     mix-blend-mode: screen;
     color:white;
     border-radius: 50px;
+    margin-left: 125px;
     margin-top: 40px;
   }
 
@@ -223,7 +224,7 @@ h5 {
   }
 
   #bugBox {
-    height: 60px;
+    height: 50px;
     width: 80%;
     text-align: center;
     margin: 5px;
