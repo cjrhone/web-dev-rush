@@ -32,7 +32,16 @@ var music = new Howl({
 
 var type = new Howl({
   src:['Assets/SFX/keyboard_key.mp3']
-})
+});
+
+var lose = new Howl({
+  src:['Assets/SFX/website-change.wav']
+
+});
+
+var select = new Howl({
+  src:['Assets/SFX/select.mp3']
+});
 
 //add listener to get textbox input when a user presses enter
 function runScript(e){
@@ -52,9 +61,9 @@ function testUserInput(userInput){
     nextStep++;
     correctSound.play();
     score=score+bonusPoints;
-    timeleft=timeleft+10;
+    timeleft=timeleft+5;
     $('#correctTimeBonus').show();
-    $('#correctTimeBonus').text("+10 seconds");
+    $('#correctTimeBonus').text("+5 seconds");
     $('#correctTimeBonus').fadeOut(800);
   } else{
     misspelledWords.push(prompt[nextStep]);
@@ -165,6 +174,7 @@ function leaderBoard(){
 function timeOver() {
     if (timeleft<=0&&bug!=3) {
       gameOver();
+
     } else {}
 }
 
@@ -186,6 +196,7 @@ function clearLines(){
 }
 
 function gameOver(){
+  lose.play();
   player1.score=score;
   $(".game-over").show();
   $(".playGame").hide();
@@ -223,6 +234,7 @@ function progressBar() {
 }
 
 function showNextStep(){
+  select.play();
   document.getElementById("step"+nextStep).textContent=prompt[nextStep-1];
   progressBar();
 }
@@ -261,6 +273,7 @@ $(document).ready(function() {
   $('#instructionText').text(instruction[nextStep]);
 
   $("#startGame").submit(function(event){
+    select.play();
     playerName=$("#usernameInput").val();
     player1=new Player(playerName);
     console.log(player1);
@@ -272,6 +285,7 @@ $(document).ready(function() {
   });
 
   $("#continue").click(function() {
+    select.play();
     $(".instructions").hide();
     startTimer();
     $('#bugBox').addClass('animated rollIn');
@@ -293,6 +307,7 @@ $(document).ready(function() {
 
 
   $("#retryButton").click(function(){
+    select.play();
     resetGame();
     $(".game-over").hide();
     $(".playGame").show();
@@ -300,11 +315,13 @@ $(document).ready(function() {
   });
 
   $("#mainMenu").click(function() {
+    select.play();
     window.location.href = "index.html";
   });
 
   // it will toggle the page, once user click the action button
   $("#action").click(function() {
+    select.play();
     $("#personals").slideToggle();
     $("#personals").css({display: "flex"});
   });
