@@ -185,7 +185,7 @@ $(document).ready(function() {
   $("#continue").click(function() {
     $(".instructions").hide();
     startTimer();
-    music.play();
+    // music.play();
 
     $(".game").show();
     $(".closeGame").hide();

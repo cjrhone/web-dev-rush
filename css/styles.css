@@ -116,7 +116,11 @@ h5 {
 
     #progress-box {
       height: 500px;
-      background-color: green;
+      background-image: url(../Assets/graphics/electric_progress.gif);
+      background-size:     cover;                      /* <------ */
+      background-repeat:   no-repeat;
+      background-position: center center;
+      mix-blend-mode: screen;
       margin-top: 40px;
       border-radius: 50px;
       margin-left: 30px;
