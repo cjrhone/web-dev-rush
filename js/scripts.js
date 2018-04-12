@@ -4,7 +4,10 @@ var nextStep=0;
 var bug=0;
 var score=0;
 var bonusPoints=0;
-var timeleft=20;
+var timeleft=15;
+var highestScores=[];
+var player1;
+var loadedScores;
 var prompt =
 
 
@@ -36,7 +39,6 @@ function runScript(e){
   type.play();
   if (e.keyCode==13){
     var userInput=$('#inputBox').val();
-    console.log(userInput);
     $('#inputBox').val("");
     testUserInput(userInput); //test input on enter press
     clearInterval(pointTimer);
@@ -94,23 +96,74 @@ function startTimer(){
 
 }
 
-function highscoreCheck() {
-  if (score != 0) {
-        highscore = localStorage.getItem("scoreText");
-        if(highscore !== null){
-            if (score > highscore) {
-                localStorage.setItem("scoreText", score);
-            }
-        }
-        else{
-            localStorage.setItem("scoreText", score);
-        }
+function Player(name){
+  this.name=name;
+  this.score=0;
+}
+
+function clearHighScores(){
+  loadedScores=[];
+  localStorage.setItem("highestScores", JSON.stringify(loadedScores));
+  for(var x=0; x<loadedScores.length; x++){
+    console.log(x+1+". " + loadedScores[x].name + " score: "+ loadedScores[x].score);
   }
-  $('#highscoreText').text("Highscore: "+highscore);
+}
+
+function getMax(){
+  let output=[];
+  var added=false;
+//var nextItem=0;
+  if (player1.score>loadedScores[0].score){
+    loadedScores.splice(0, 0, player1);
+    console.log ("added top score");
+    added=true;
+  }
+  if (added===false){
+    for(let i=0; i<loadedScores.length&&added===false; i++){
+      console.log("for loop i: "+i);
+      let nextItem;
+      if (loadedScores[i+1]===undefined){
+        nextItem=undefined;
+      } else{
+        nextItem=loadedScores[i+1].score;
+      }
+
+      if (player1.score<loadedScores[0].score&&player1.score>nextItem){
+        loadedScores.splice(i+1,0, player1);
+        console.log("max found and splice happens");
+        added=true;
+        console.log("next item:" +nextItem);
+      } else if (player1.score<loadedScores[loadedScores.length-1].score){
+        loadedScores.push(player1);
+        console.log("max found and splice happens condition 2");
+        added=true;
+      } else{}
+    }
+    if (added===false){
+      console.log("added to the end");
+      loadedScores.push(player1);
+      added=true;
+    } else{}
+  }
+}
+
+function leaderBoard(){
+  if (loadedScores.length<1){
+    loadedScores.push(player1);
+    console.log("added first value");
+    console.log(1+"."+loadedScores[0].name+ " score: "+loadedScores[0].score);
+  } else{
+    getMax();
+    for(x=0; x<loadedScores.length; x++){
+      console.log(x+ 1+"."+loadedScores[x].name+ " score: "+loadedScores[x].score);
+    }
+  }
+  localStorage.setItem("highestScores", JSON.stringify(loadedScores));
+  console.log(loadedScores);
 }
 
 function timeOver() {
-    if (timeleft==0) {
+    if (timeleft<=0&&bug!=3) {
       gameOver();
     } else {}
 }
@@ -133,13 +186,18 @@ function clearLines(){
 }
 
 function gameOver(){
+  player1.score=score;
   $(".game-over").show().addClass('animated bounceInDown');
   $(".playGame").hide();
   $("#finalScore").text(score);
+  $("#retryButton");
   showMisspelledWords();
+  leaderBoard();
+  showHighScores();
 }
 
 function resetGame(){
+  player1=new Player(playerName);
   clearInterval(pointTimer);
   timeleft=20;
   $("timeLimitText").text("20");
@@ -165,6 +223,15 @@ function stepClass(){
   textContent.addClass('animated fadeIn');
 }
 
+function showHighScores(){
+  document.getElementById("highScoreList").textContent="";
+  loadedScores.forEach(function(loadedScore){
+    console.log("display loop runs");
+    $("#highScoreList").append("<li class='noFloat'>" +loadedScore.name+" "+loadedScore.score);
+  });
+  $("#highScoreList").append("</li>");
+}
+
 
 function showMisspelledWords(){
   document.getElementById("misspelledList").textContent=misspelledWords;
@@ -172,11 +239,24 @@ function showMisspelledWords(){
 // USER INTERFACE LOGIC
 
 $(document).ready(function() {
+  if (typeof(Storage) !== "undefined") {
+    console.log("Code for localStorage/sessionStorage.");
+    loadedScores= JSON.parse(localStorage.getItem("highestScores"));
+    if (loadedScores===null){
+      loadedScores=[];
+    }
+  } else {
+    console.log("Sorry! No Web Storage support..");
+  }
+
 
   $('#promptText').text(prompt[nextStep]);
   $('#instructionText').text(instruction[nextStep]);
 
   $("#startGame").submit(function(event){
+    playerName=$("#usernameInput").val();
+    player1=new Player(playerName);
+    console.log(player1);
     event.preventDefault();
     $(".instructions").show();
     $(".closeGame").hide();
