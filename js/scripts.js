@@ -323,6 +323,7 @@ $(document).ready(function() {
 
   $("#startGame").submit(function(event){
     select.play();
+    music.play();
     playerName=$("#usernameInput").val();
     player1=new Player(playerName);
     console.log(player1);
@@ -334,7 +335,9 @@ $(document).ready(function() {
   });
 
   $("#continue").click(function() {
+
     select.play();
+
     $(".instructions").hide();
     startTimer();
     $('#bugBox').addClass('animated flipInX');
